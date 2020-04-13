@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html>
+
+<!--- Head starts here -->
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<script src ="https://use.fontawesome.com/d1341f9b7a.js"></script>
+<script src="script.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<title>Website Generator</title>
+
+<link rel="stylesheet" href="style.css"> 
+<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/v4-shims.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+     
+</head>
+<!--- Head ends here --> 
+<body>
+    <div id="inputs">
+        <input placeholder="Enter your name..." id="inputQuestion" style="width:300px; letter-spacing:2px;font-family:'Courier New', Courier, monospace; font-size:15px; color:black; position:relative; top:300px;background:white; border:3px SOLID BLACK;; border-radius: 30px; margin:0 auto; padding:5px 25px; display:block;">
+        <input placeholder="Job title 1 " id="inputQuestion1" style="width:300px; letter-spacing:2px;font-family:'Courier New', Courier, monospace; font-size:15px; color:black; position:relative; top:300px;background:white; border:3px SOLID BLACK;; border-radius: 30px; margin:0 auto; padding:5px 25px; display:block;">
+        <input placeholder="Job title 1 "  id="inputQuestion2" style="width:300px; letter-spacing:2px;font-family:'Courier New', Courier, monospace; font-size:15px; color:black; position:relative; top:300px;background:white; border:3px SOLID BLACK;; border-radius: 30px; margin:0 auto; padding:5px 25px; display:block;">
+        
+        <button onclick="PushToArray()" style="width:300px; letter-spacing:2px;font-family:'Courier New', Courier, monospace; font-size:20px; color:white; position:relative; top:400px;background:black; border:none; border-radius: 30px; margin:0 auto; padding:5px 25px; display:block;">Submit</button>
+        
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--- Wrapper class starts here --> 
+
+<div id="body" class="hide">
+<div class="wrapper">
+
+    <!--- Navigation bar starts here -->
+<nav>
+
+
+          <div id="boxName3" style="text-transform:capitalize;" class="content wow fadeInLeftBig">
+        
+                <span  id="brand" style="font-weight: 300;"></span>
+               
+          </div>
+         
+
+                      <ul id="menu">
+                                        <li style="animation-duration: 1s ;" class="wow fadeInRightBig"><a  style="background-color: white; color:black">Home</a></li>
+                                        <li style="animation-duration: 1.5s ;" class="wow fadeInRightBig"><a  href="../html/about.html">About</a></li>
+                                        <li style="animation-duration: 2.5s ;" class="wow fadeInRightBig"><a href="../html/work.html">Projects</a></li>
+                                        <li style="animation-duration: 3s ;" class="wow fadeInRightBig"><a href="../html/contact.html">Contact</a></li>
+                      </ul>
+
+</nav>
+
+    <div id="toggle">
+          <div class="menu-wrap">
+
+                <input id="this" type="checkbox" class="toggler" onclick="on()">
+                <div class="hamburger" ><div></div></div>
+          
+                <div class="menu">
+                <div>
+                <div>
+                      <ul>
+                            <li><a class="active" href="#" style="letter-spacing: 5px;">Home</a></li>
+                            <li><a href="../html/about.html" style="letter-spacing: 5px;">About</a></li>
+                            <li><a href="../html/work.html" style="text-align: center; letter-spacing: 2px;">Projects</a></li>
+                            <li><a href="../html/contact.html" style="letter-spacing: 5px;" >Contact</a></li>
+                      </ul>
+                      
+                </div>
+                </div>
+                </div>
+                
+          </div>
+    
+    </div>
+
+    <!--- Navigation bar ends here -->
+
+
+    <!--- Resize navigation bar ends here -->
+    
+    <!--- Type writer starts here -->
+    <div class="hero">
+          <div class="header ">
+                
+                            <h1 id="boxName4" class="line anim-typewriter"></h1>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+                            <h1 class="line anim-typewriter" data-wow-delay="7s" >Welcome to my portfolio website.</h1>
+
+                      <div style="position: relative; top: 150px;" class="scroll-down"></div>
+          </div>
+          
+    </div>
+     <!--- Type writer ends here -->          
+</div>
+<!--- Wrapper ends starts here -->
+
+
+<br>
+<br>
+
+<!--- Profile box starts here --> 
+<div class= "box">
+
+       <div class="wow fadeInRightBig"><img id="image" class="box-img"></div>
+          
+
+<br>
+<br>
+<br>
+
+          <h1 id="boxName" style="text-transform: capitalize;" class=" wow fadeInLeftBig"></h1>
+
+<br>
+
+          <h5 id="boxName1" style="text-transform: capitalize;" class="wow fadeInRightBig"></h5> 
+
+<br>
+
+          <h5 id="boxName2" style="text-transform: capitalize;" class="wow fadeInLeftBig"></h5> 
+
+<br>
+
+          <hr class="wow fadeInRightBig" style="background:white; opacity:0.5;">
+
+<br>
+<br>
+
+          <h2 class="wow fadeInLeftBig"><a href="about.html">ABOUT</a></h2>
+
+<br>
+<br>
+
+          <h2 class="wow fadeInRightBig"><a href="work.html">PROJECTS</h2></a>
+
+<br>
+<br>
+
+
+          <h2 class="wow fadeInLeftBig"><a href="contact.html">CONTACT</a></h2>
+
+</div> 
+<!--- Profile box ends here --> 
+
+<br>
+<br>
+
+<!--- Footer class starts here --> 
+<div class="footer">
+                            <div class="container">
+
+<br>
+<br>
+
+                                        <div class="hr wow fadeInRightBig" style="height:2px"></div>
+                                        <div class="row"></div>
+                            </div>
+
+<br>
+<br>
+
+<div class="info">
+
+    <div class="row">
+         
+                      <div class="col-lg-4" id="personal">
+
+
+                            <p></p>
+                            <h4></h4>
+                      </div>
+
+<br>
+<br>
+
+                <div class="col-lg-4" id="media">
+                    
+                                                                  
+
+
+<!--- Social media icons starts here -->                                         
+<ul>
+
+<!--- Instagram -->
+<span>
+    <span>
+          <span>
+                <li id="fb" style="animation-duration: 4s;">
+                      <a href="https://www.instagram.com/talalzeini/">
+                            <i style="animation-duration: 1.5s;" class="fab fa-instagram wow fadeInLeftBig" aria-hidden="true"></i>
+                      </a>
+                </li>
+          </span>
+    </span>     
+</span>
+<!--- Twitter -->
+    <span>       
+          <li id="yt" style="animation-duration: 4.25s;" >
+                <a href="https://www.twitter.com/talalzeini/">
+                      <i style="animation-duration: 1s;" class="fa fa-twitter wow fadeInLeftBig" aria-hidden="true"></i>
+                </a>
+          </li>
+    </span>
+
+<!--- Github -->         
+    <li id="ig" style="animation-duration: 4.5s;">
+          <a  href="https://github.com/talalzeini">
+                <i style="animation-duration: 1s;" class="fa fa-github wow fadeInRightBig" aria-hidden="true"></i>
+          </a>
+    </li>
+
+<!--- Linkedin -->        
+<span>
+    <span>
+                <li id="ig" style="animation-duration: 4.75s;" >
+                      <a href="https://www.linkedin.com/in/talal-zeini-931499193/">
+                           <i style="animation-duration: 1.5s;" class="fa fa-linkedin-square wow fadeInRightBig" aria-hidden="true"></i>
+                      </a>
+                </li>
+    </span>
+</span>
+
+
+</ul>
+<!-
+
+<br>
+<br>
+
+                </div>                               
+
+<br>
+<br>
+                                         
+    </div>
+</div>
+</div>
+<!--- Footer class ends here -->
+
+<br>
+<br>
+<br>
+<br>
+                                                    
+                                                    
+<!--- Copy right starts here -->
+<footer>
+           <p style=" text-transform:uppercase;" class="copyright wow fadeInRightBig" id="footerInput"> </p>
+</footer>
+
+<!--- Copy right ends here -->
+
+</div>
+<script type="text/javascript">
+new WOW().init();
+</script>      
+</body>
+<!--- Body ends here -->
+
+</html>
