@@ -2,7 +2,6 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: "Roboto Mono" !important;
-    background: black !important;
     color: #fff !important;    
 }
 .hide{
@@ -96,7 +95,7 @@ p.copyright span{
 /* Navigation bar */
 nav {
     width: 100%;
-    background: black;
+ 
     height: 80px;
     top: 0;
     overflow-y: hidden;
@@ -112,12 +111,17 @@ nav {
 /*  */
 /*  */
 /* Name appearing */
+
+
+.block{
+    display:block;
+}
 .content{
     left: 80px;
     position: fixed;
     color:white;
     float: left;
-    display: block;
+    
     font-size:15px;
     line-height: 80px;
     font-weight: normal;   
@@ -369,7 +373,7 @@ height: 1px;
  list-style: none;
 }
 #media ul li {
- animation: float 6s ease-in-out infinite;
+
  display: inline-block;
  position: relative;
  width:50px;
@@ -386,7 +390,7 @@ height: 1px;
 
 }
 #media ul li a:hover{
- color:gray;
+ color:black;
  width: 50px;
  display: flex;
  align-items: center;
@@ -605,12 +609,19 @@ font-family: 'Courier New', sans-serif;
 background: url(../images/mainimage.jpg);
 background:cover;
 background-size:100%;
-border-radius: 50%;
 width: 250px;
 transform: translatey(0px);
 animation: float 6s ease-in-out infinite;
 height: 250px;
 transition: all 0.1s ease-out;
+}
+
+
+.round{
+border-radius: 50%;
+}
+.sqaure{
+    border-radius: 0%;
 }
 
 .box-img:hover { 
@@ -921,4 +932,18 @@ color: #ff4d4d;
    transition: all 0.75s;
   }
 
-
+.red{
+    background:#ff6666;
+}
+  
+.blue{
+    background:#1ac6ff;
+}
+  
+.green{
+    background:#80ffbf;
+}
+.black{
+    background:black;
+}
+  

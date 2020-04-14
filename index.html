@@ -11,6 +11,7 @@
 <script src ="https://use.fontawesome.com/d1341f9b7a.js"></script>
 <script src="script.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://use.fontawesome.com/aac5c45839.js"></script>
 
 <title>Website Generator</title>
 
@@ -23,12 +24,53 @@
      
 </head>
 <!--- Head ends here --> 
-<body>
+<body onload="enableEditMode()" id="mainBody" class="black">
     <div id="inputs">
+      <!-- <div class="hero">
+            <div class="header ">
+                  
+                              <h1 id="boxName4" class="line anim-typewriter">Need a portfolio website?</h1>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  
+                              <h1 class="line anim-typewriter" data-wow-delay="7s" >Create one in few minutes.</h1>
+  
+                        <div style="position: relative; top: 150px;" class="scroll-down"></div>
+            </div>
+            
+      </div> -->
         <input placeholder="Enter your name..." id="inputQuestion" style="width:300px; letter-spacing:2px;font-family:'Courier New', Courier, monospace; font-size:15px; color:black; position:relative; top:300px;background:white; border:3px SOLID BLACK;; border-radius: 30px; margin:0 auto; padding:5px 25px; display:block;">
         <input placeholder="Job title 1 " id="inputQuestion1" style="width:300px; letter-spacing:2px;font-family:'Courier New', Courier, monospace; font-size:15px; color:black; position:relative; top:300px;background:white; border:3px SOLID BLACK;; border-radius: 30px; margin:0 auto; padding:5px 25px; display:block;">
         <input placeholder="Job title 1 "  id="inputQuestion2" style="width:300px; letter-spacing:2px;font-family:'Courier New', Courier, monospace; font-size:15px; color:black; position:relative; top:300px;background:white; border:3px SOLID BLACK;; border-radius: 30px; margin:0 auto; padding:5px 25px; display:block;">
-        
+        <input placeholder="image"  id="img" style="width:100px; letter-spacing:2px;font-family:'Courier New', Courier, monospace; font-size:15px; color:black; position:relative; top:300px;background:white; border:3px SOLID BLACK;; border-radius: 30px; margin:0 auto; padding:5px 25px; display:block;">
+        <input placeholder="instagram"  id="insta" style="width:200px; letter-spacing:2px;font-family:'Courier New', Courier, monospace; font-size:15px; color:black; position:relative; top:300px;background:white; border:3px SOLID BLACK;; border-radius: 30px; margin:0 auto; padding:5px 25px; display:block;">
+        <input placeholder="github"  id="github" style="width:200px; letter-spacing:2px;font-family:'Courier New', Courier, monospace; font-size:15px; color:black; position:relative; top:300px;background:white; border:3px SOLID BLACK;; border-radius: 30px; margin:0 auto; padding:5px 25px; display:block;">
+        <input placeholder="twitter"  id="twitter" style="width:200px; letter-spacing:2px;font-family:'Courier New', Courier, monospace; font-size:15px; color:black; position:relative; top:300px;background:white; border:3px SOLID BLACK;; border-radius: 30px; margin:0 auto; padding:5px 25px; display:block;">
+
+
+        <select id="br" >
+            <option  class= "selected" disabled selected value="0">Choose an Option</option>
+            <option  value="yes">yes</option>
+            <option  value="no">no</option>
+        </select>
+
+        <select id="pic" >
+            <option  class= "selected" disabled selected value="0">Choose an pic?</option>
+            <option  value="round">round</option>
+            <option  value="square">square</option>
+        </select>
+
+
+
+
+
+
+        <button onclick="red()" style="width:50px; height:50px;letter-spacing:2px;font-family:'Courier New', Courier, monospace; font-size:20px; color:white; position:relative; top:325px;background: #ff6666; border:none; border-radius: 50%; margin:0 auto; padding:5px 25px; display:block;"></button>
+        <button onclick="blue()" style="width:50px;height:50px; letter-spacing:2px;font-family:'Courier New', Courier, monospace; font-size:20px; color:white; position:relative; top:350px;background: #1ac6ff; border:none; border-radius: 50%; margin:0 auto; padding:5px 25px; display:block;"></button>
+        <button onclick="green()" style="width:50px;height:50px; letter-spacing:2px;font-family:'Courier New', Courier, monospace; font-size:20px; color:white; position:relative; top:375px;background:#80ffbf; border:none; border-radius: 50%; margin:0 auto; padding:5px 25px; display:block;"></button>
         <button onclick="PushToArray()" style="width:300px; letter-spacing:2px;font-family:'Courier New', Courier, monospace; font-size:20px; color:white; position:relative; top:400px;background:black; border:none; border-radius: 30px; margin:0 auto; padding:5px 25px; display:block;">Submit</button>
         
     </div>
@@ -97,10 +139,10 @@
 <div class="wrapper">
 
     <!--- Navigation bar starts here -->
-<nav>
+<nav id="mainNav" class="black">
 
 
-          <div id="boxName3" style="text-transform:capitalize;" class="content wow fadeInLeftBig">
+          <div id="boxName3" style="text-transform:capitalize;" class="content wow fadeInLeftBig block">
         
                 <span  id="brand" style="font-weight: 300;"></span>
                
@@ -173,7 +215,7 @@
 <!--- Profile box starts here --> 
 <div class= "box">
 
-       <div class="wow fadeInRightBig"><img id="image" class="box-img"></div>
+       <div class="wow fadeInRightBig"><img  id="image" class="box-img square"></img></div>
           
 
 <br>
@@ -257,7 +299,7 @@
     <span>
           <span>
                 <li id="fb" style="animation-duration: 4s;">
-                      <a href="https://www.instagram.com/talalzeini/">
+                  <a id="instaLink">
                             <i style="animation-duration: 1.5s;" class="fab fa-instagram wow fadeInLeftBig" aria-hidden="true"></i>
                       </a>
                 </li>
@@ -267,7 +309,7 @@
 <!--- Twitter -->
     <span>       
           <li id="yt" style="animation-duration: 4.25s;" >
-                <a href="https://www.twitter.com/talalzeini/">
+                <a id="twitterLink">
                       <i style="animation-duration: 1s;" class="fa fa-twitter wow fadeInLeftBig" aria-hidden="true"></i>
                 </a>
           </li>
@@ -275,7 +317,7 @@
 
 <!--- Github -->         
     <li id="ig" style="animation-duration: 4.5s;">
-          <a  href="https://github.com/talalzeini">
+           <a id="gitLink">
                 <i style="animation-duration: 1s;" class="fa fa-github wow fadeInRightBig" aria-hidden="true"></i>
           </a>
     </li>
@@ -284,7 +326,7 @@
 <span>
     <span>
                 <li id="ig" style="animation-duration: 4.75s;" >
-                      <a href="https://www.linkedin.com/in/talal-zeini-931499193/">
+                      <a href="https://www.linkedin.com/in/">
                            <i style="animation-duration: 1.5s;" class="fa fa-linkedin-square wow fadeInRightBig" aria-hidden="true"></i>
                       </a>
                 </li>
