@@ -34,15 +34,24 @@ p.copyright span{
     width: 24em;
     top: 50%;
     margin: auto;
-    border-right: 2px solid rgba(255, 255, 255, 0.75);
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
     transform: translateY(-50%);
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
 }
+
 .anim-typewriter {
-    animation: typewriter 4s steps(40) 1s 1 normal both,
-    blinkTextCussor 500ms steps(40) infinite normal;
+    animation: typewriter 2s steps(40) 1s 1 normal both,
+    blinkTextCussor 400ms steps(40) infinite normal;
+}
+.anim-typewriter1 {
+    animation: typewriter1 2s steps(40) 1s 1 normal both,
+    blinkTextCussor 400ms steps(40) infinite normal;
+}
+.anim-typewriter2 {
+    animation: typewriter2 2s steps(40) 1s 1 normal both,
+    blinkTextCussor 400ms steps(40) infinite normal;
 }
 
 @keyframes typewriter {
@@ -63,6 +72,51 @@ p.copyright span{
           }
     }
 }
+
+@keyframes typewriter1 {
+    from {
+          width: 0;
+    }
+    to {
+          width: 18em;
+    }
+}
+@media(max-width: 768px) {
+    @keyframes typewriter1 {
+          from {
+                width: 0;
+          }
+          to {
+                width: 18em;
+          }
+    }
+}
+
+@keyframes typewriter2 {
+    from {
+          width: 0;
+    }
+    to {
+          width: 20.5em;
+    }
+}
+@media(max-width: 768px) {
+    @keyframes typewriter2 {
+          from {
+                width: 0;
+          }
+          to {
+                width: 20.5em;
+          }
+    }
+}
+
+
+
+
+
+
+
 @keyframes blinkTextCussor {
     from {
           border-right-color: rgba(255, 255, 255, 0.75);
@@ -95,7 +149,6 @@ p.copyright span{
 /* Navigation bar */
 nav {
     width: 100%;
- 
     height: 80px;
     top: 0;
     overflow-y: hidden;
@@ -947,3 +1000,113 @@ color: #ff4d4d;
     background:black;
 }
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* payment */
+.payment{
+    background-color: #f8f8f8;
+    max-width:600px;
+    margin: 80px auto;
+    height:auto;
+    padding:35px;
+    padding-top:70px;
+    border-radius: 5px;
+    position: relative;
+}
+.payment h2{
+    text-align:center;
+    letter-spacing:2px;
+    margin-bottom: 40px;
+}
+.form .label{
+    display: block;
+    color: #555555;
+    margin-bottom: 6px;
+}
+.form .input{
+    padding:13px 0 13px 25px;
+    width:100%;
+    border:2px solid #dddddd;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    outline:none;
+    font-size:16px;
+    color:#555555;
+}
+.card-grp{
+    display: flex;
+    justify-content: space-between;
+}
+.card-item{
+    width:48%;
+}
+.space{
+    margin-bottom:20px;
+}
+.icon-relative{
+    position:relative;
+}
+.icon-relative .far {
+    position: absolute;
+    left:15px;
+    bottom:15px;
+    font-size:20px;
+    color:#555555;
+}
+.icon-relative .fas{
+    position:absolute;
+    left:15px;
+    bottom:15px;
+    font-size:20px;
+    color:#555555;
+}
+.btn{
+    margin-top:40px;
+    background:#1ab2ff;
+    text-align: center;
+    padding:15px;
+    font-size:15px;
+    width:100%;
+    letter-spacing: 1.5px;
+    color:#f8f8f8;
+    border-radius: 5px;
+    cursor: pointer;
+    border:2px solid #1ab2ff;
+}
+.btn:hover{
+    transition: all 0.1s;
+    background:white;
+    color:#1ab2ff;
+}
+.btn2{
+    margin-top:20px;
+    background:#1ab2ff;
+    text-align: center;
+    padding:15px;
+    font-size:15px;
+    width:100%;
+    letter-spacing: 1.5px;
+    color:#f8f8f8;
+    border-radius: 5px;
+    cursor: pointer;
+    border:2px solid #1ab2ff;
+}
+.btn2:hover{
+    transition: all 0.1s;
+    background:white;
+    color:#1ab2ff;
+}

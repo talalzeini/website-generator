@@ -97,55 +97,9 @@ input3.innerText += questionText;
 input5.innerHTML += "<span>&copy;</span> " + questionText + " 2020"
  
 
-
-
-}
-
-function red(){
-    document.getElementById('mainBody').classList.remove('black');
-    document.getElementById('mainBody').classList.remove('blue');
-    document.getElementById('mainBody').classList.remove('green');
-    document.getElementById('mainBody').classList.add('red');
-    document.getElementById('mainNav').classList.remove('black');
-    document.getElementById('mainNav').classList.remove('blue');
-    document.getElementById('mainNav').classList.remove('green');
-    document.getElementById('mainNav').classList.add('red');
-    
-}
-function blue(){
-    document.getElementById('mainBody').classList.remove('black');
-    document.getElementById('mainBody').classList.remove('red');
-    document.getElementById('mainBody').classList.add('blue');
-    document.getElementById('mainBody').classList.remove('green');
-    document.getElementById('mainNav').classList.remove('black');
-    document.getElementById('mainNav').classList.remove('red');
-    document.getElementById('mainNav').classList.add('blue');
-    document.getElementById('mainNav').classList.remove('green');
-}
-function green(){
-    document.getElementById('mainBody').classList.remove('black');
-    document.getElementById('mainBody').classList.remove('blue');
-    document.getElementById('mainBody').classList.add('green');
-    document.getElementById('mainBody').classList.remove('red');
-    document.getElementById('mainNav').classList.remove('black');
-    document.getElementById('mainNav').classList.remove('blue');
-    document.getElementById('mainNav').classList.add('green');
-    document.getElementById('mainNav').classList.remove('red');
-}
-
-function black(){
+document.getElementById('mainNav').style.backgroundColor =  document.body.style.backgroundColor
 
 }
-function white(){
-    
-}
-function execCommandWithArg(command, arg){
-    richTextField.document.execCommand(command, false, arg);
-}
-function enableEditMode(){
-    richTextField.document.designMode = "On";
-    }
-
 
 
 
