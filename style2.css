@@ -4,7 +4,7 @@ html, body {
     font-family: "Roboto Mono" !important;
     color: #fff !important;       
     overflow-x: hidden;
-    background-color: white;
+    background-color: black;
     z-index: 1;
 }
 
@@ -51,7 +51,7 @@ p.copyright span{
     white-space: nowrap;
     overflow: hidden;
     transform: translateY(-50%);
-    border-right: 2px solid rgba(0, 0, 0, 0.75);
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
 }
 
 .anim-typewriter {
@@ -132,7 +132,7 @@ p.copyright span{
 
 @keyframes blinkTextCussor {
     from {
-          border-right-color: rgba(0, 0, 0, 0.75);
+          border-right-color: rgba(255, 255, 255, 0.75);
     }
     to {
           border-right-color: transparent;
@@ -146,7 +146,7 @@ p.copyright span{
 }
 
 .hero h1 {
-    color:black;
+    color:white;
     text-align: center;
     font-size: 30px;
 }
@@ -257,7 +257,7 @@ nav {
 }
 .content{
     left: 80px;
-    position: fixed;
+    position:relative;
     color:white;
     float: left;
     line-height: 80px;
