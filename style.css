@@ -185,7 +185,6 @@ right:0%;
     font-size: 15px;
 }
 }
-
 .greenBG{
     margin:0px auto;
     position: relative;  
@@ -235,6 +234,110 @@ right:0%;
     top:75px;
     font-size: 15px;
 }
+}
+
+/* contact us styles start */
+
+#contact{
+    background: #ff9999;
+    padding: 4rem 0 8rem;
+
+}
+#contact h2{
+    text-align: center;
+    margin-bottom: 4rem;
+}
+#form-container{
+    width:58%;
+    border-radius: 12px;
+    background-color: white;
+    box-sizing: border-box;
+    padding:3rem;
+    height: 0%;
+}
+#form-container h3{
+    color:black;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+::placeholder{
+    text-indent: 10px;
+    font-size: 15px;
+ }
+#form-container input, 
+#form-container textarea{
+    display:block;
+    margin-top: 1rem;
+    padding:10px;
+    color:black;
+    border-radius: 20px;
+    border:1px solid rgba(0,0,0,0.1);
+    box-sizing: border-box;
+    height:43px;
+    width:100%;
+    font-size: 1rem;
+    color:#495057;
+}
+#form-container textarea{
+    height:170px;
+    margin-bottom:2rem;
+    resize:none;
+}
+#address-container{
+    width:38%;
+    background-color: white;
+    box-sizing: border-box;
+    padding:1.5rem;
+    height:0%;
+    border-radius: 12px;
+}
+#address-container label{
+    margin-top: 2rem;
+    display: block;
+}
+#address-container label:first-child{
+    margin-top: 0;
+}
+#address-container address{
+    margin-bottom: 1.5rem;
+    font-style: normal;
+}
+#address-container a{
+text-decoration: none;
+color:  #1ab2ff;
+}
+#address-container a:hover{
+    text-decoration: underline;
+}
+.submit{
+    display:block; 
+    margin:0 auto;
+    position: relative;
+    top:20px;
+    width:125px;
+    border: 3px solid #66a3ff;
+    color:black;
+    border-radius: 30px;
+    height:40px;
+    color:#66a3ff;
+    background-color: white;
+    transition: all 0.75s;
+}
+.submit:hover{
+    position: relative;
+    width:125px;
+    border: 3px solid #66a3ff;
+    color:black;
+    border-radius: 30px;
+    font-size: 15px;
+    color:white;
+    transition: all 0.75s;
+    background-color: #66a3ff;
+}
+/* contact us styles end */
+.flex{
+    display:flex;
+    justify-content:space-between;
 }
 .blackBG{
 margin:750px auto; 
