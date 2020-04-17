@@ -98,7 +98,26 @@ input5.innerHTML += "<span>&copy;</span> " + questionText + " 2020"
  
 
 document.getElementById('mainNav').style.backgroundColor =  document.body.style.backgroundColor
-
+add()
 }
 
-
+function download(filename, text) {
+   
+    var element = document.createElement('a');
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    element.setAttribute('download', filename);
+  
+    element.style.display = 'none';
+    document.body.appendChild(element);
+  
+    element.click();
+  
+    document.body.removeChild(element);
+    console.log("downloading2")
+  }
+  function add(){
+    const eh =  "<!DOCTYPE html><html><head id='head'>" + document.getElementById('head').innerHTML +  "</head><body id='mainBody' class='black'><div id='body'>" + document.getElementById('body').innerHTML + "</div></body></html>";
+  // Start file download.
+  download("index.html",eh);
+  console.log("downloading")
+  }
