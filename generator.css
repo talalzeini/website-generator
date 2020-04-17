@@ -4,7 +4,6 @@ html, body {
     font-family: "Roboto Mono" !important;
     color: #fff !important;       
     overflow-x: hidden;
-    background-color: black;
     z-index: 1;
 }
 

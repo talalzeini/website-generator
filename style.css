@@ -237,7 +237,11 @@ right:0%;
 }
 
 /* contact us styles start */
+#contact1{
+    background: black;
+    padding: 4rem 0 8rem;
 
+}
 #contact{
     background: #ff9999;
     padding: 4rem 0 8rem;
@@ -266,6 +270,7 @@ right:0%;
  }
 #form-container input, 
 #form-container textarea{
+    text-indent: 10px;
     display:block;
     margin-top: 1rem;
     padding:10px;
@@ -324,12 +329,7 @@ color:  #1ab2ff;
     transition: all 0.75s;
 }
 .submit:hover{
-    position: relative;
-    width:125px;
     border: 3px solid #66a3ff;
-    color:black;
-    border-radius: 30px;
-    font-size: 15px;
     color:white;
     transition: all 0.75s;
     background-color: #66a3ff;
@@ -340,10 +340,9 @@ color:  #1ab2ff;
     justify-content:space-between;
 }
 .blackBG{
-margin:750px auto; 
 position: relative;  
 background:black; 
-height:750px; 
+height:800px; 
 }
 .blackHead{
     margin:50px auto;
@@ -449,4 +448,7 @@ height:750px;
 }
 .block{
     display:block;
+}
+.black{
+    background-color: black;
 }
