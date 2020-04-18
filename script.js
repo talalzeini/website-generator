@@ -3,6 +3,35 @@
 
 
 var array = [];
+function getPhoto(a) {
+  
+    // validation for instagram usernames
+    var regex = new RegExp(/^(?!.*\.\.)(?!.*\.$)[^\W][\w.]{0,29}$/);
+    var validation = regex.test(a);
+  
+    if(validation) {
+    
+      $.get("https://www.instagram.com/"+a+"/?__a=1")
+      .done(function(data) { 
+  
+        // getting the url
+        var photoURL = data["graphql"]["user"]["profile_pic_url_hd"];
+  
+        // update img element
+        $("#image").attr("src",photoURL)
+       
+       })
+      .fail(function() { 
+        // code for 404 error 
+        alert('Username was not found!')
+      })
+    
+    } else {
+    
+      alert('The username is invalid!')
+    }
+  
+  }
 
 
 function PushToArray(){
@@ -21,17 +50,11 @@ if(document.getElementById('brandOptions').value == "no"){
         document.getElementById('navBrand').classList.remove('block');
         document.getElementById('brand').classList.remove('block');
 }
-if( document.getElementById('pic').value == "round"){
-    console.log('yes')
-    document.getElementById('image').classList.add('round');
-    document.getElementById('image').classList.remove('square');
-    
-}
-if(document.getElementById('pic').value == "square"){
-    console.log('no');
-    document.getElementById('image').classList.remove('round');
-    document.getElementById('image').classList.add('square');
-}
+
+
+
+
+
 
 
 console.log("PushToArray() function called.")
@@ -54,16 +77,11 @@ var job2 = document.getElementById('job2');
 var navBrand = document.getElementById('navBrand');
 var typeWriter = document.getElementById('boxName4');
 var footerInput = document.getElementById('footerInput');
-
-nameFully.innerText += yourName;
 typeWriter.innerHTML += "Hello, my name is <span style='text-transform:capitalize'>" +  yourName + "</span>.";
 job1.innerText += jobTitle1;
 job2 .innerText += jobTitle2;
 navBrand.innerText += yourName;
 footerInput.innerHTML += "<span>&copy;</span> " + yourName + " 2020"
-
-
-
 
 
 // Social media are called here
@@ -188,4 +206,52 @@ if(document.getElementById('yourName').value.trim().length == 0 && !document.get
 }
 
     
-    
+function next1(){
+    if(document.getElementById('picImage').value == "0" && document.getElementById('pic').value == "0"){
+        window.alert("You must fill out this form properly in order to proceed.");
+        return;
+    }
+    if(document.getElementById('pic').value == "0" && !document.getElementById('picImage').value == "0"){
+        window.alert("You must choose a picture shape in order to proceed");
+        return;
+    }
+    if(document.getElementById('picImage').value == "0" && !document.getElementById('pic').value == "0"){
+        window.alert("You must choose what picture you want to include in your website in order to proceed.");
+        return;
+    }
+
+
+    if( document.getElementById('pic').value == "round"){
+        document.getElementById('image').classList.add('round');
+        document.getElementById('image').classList.remove('square');   
+    }
+    if(document.getElementById('pic').value == "square"){
+        document.getElementById('image').classList.remove('round');
+        document.getElementById('image').classList.add('square');
+    }
+
+
+
+    if(document.getElementById('picImage').value == "url"){
+        if(document.getElementById('inputURL').value.trim().length == 0){
+        window.alert("You must enter the image URL address in order to proceed.");
+        return;
+        }
+        var inputURL = document.getElementById('inputURL').value;
+        var image = document.getElementById('image');
+        image.src = inputURL;
+  
+        document.getElementById('instaButton').classList.add('hide');
+        document.getElementById('urlButton').classList.remove('hide'); 
+    }
+    if(document.getElementById('picImage').value == "pp"){
+        document.getElementById('instaButton').classList.remove('hide');
+        document.getElementById('urlButton').classList.add('hide');
+    }
+   document.getElementById('third').classList.remove('hide')
+   document.getElementById('second').classList.add('hide')
+}
+
+
+
+

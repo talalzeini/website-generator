@@ -12,6 +12,8 @@
 <script src="script.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script src="https://use.fontawesome.com/aac5c45839.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 
 <title>Website Generator</title>
 
@@ -59,31 +61,39 @@
       <br>
       <div class="payment">
               <h2 style=color:black;>Information</h2>
-              <div class="form">
+                <div id="first" class="form">
                         <label for="" class="label" style="text-align: center; font-size: 20px;">Full Name</label>
-                        <input  id="yourName" type="text" class="input" name="card_holder" placeholder="First Last">
-                        <br>
-                        <br>
-                        <select id="brandOptions"  class="input" style=" -webkit-appearance: none;
-                        -webkit-border-radius: 5px;border:2px solid gray;  background-color: transparent;"  >
+                        <input  id="yourName" type="text" class="input" name="card_holder" placeholder="First Last"><br><br>
+                        <select id="brandOptions"  class="input" style=" -webkit-appearance: none;-webkit-border-radius: 5px;border:2px solid gray;  background-color: transparent;"  >
                               <option  class= "selected" disabled selected value="0">Do you want your name at the top left corner?</option>
                               <option  value="yes">Yes</option>
                               <option  value="no">No</option>
-                          </select>
-                          <br>
-                          <br>
-                          <label for="" class="label" style="text-align: center; font-size: 20px;">Job Title 1</label>
-                        <input  id="jobTitle1" type="text" class="input" name="card_holder" placeholder="Software Engineer">
-                        <br>
-                        <br>
+                        </select> <br><br>
+                        <label for="" class="label" style="text-align: center; font-size: 20px;">Job Title 1</label>
+                        <input  id="jobTitle1" type="text" class="input" name="card_holder" placeholder="Software Engineer"><br><br>
                         <label for="" class="label" style="text-align: center; font-size: 20px;">Job Title 2</label>
-                        <input  id="jobTitle2" type="text" class="input" name="card_holder" placeholder="Web Developer">
-                        <br>
-                        <br>
-                        
-                        <br>
-                        <br>
-                        <br>
+                        <input  id="jobTitle2" type="text" class="input" name="card_holder" placeholder="Web Developer"><br><br><br><br>
+                        <button onclick="next()" class="btn2">NEXT</button> 
+                </div>
+
+
+
+                        <div id="second"  class="form hide">
+                        <select id="picImage"  class="input" style=" -webkit-appearance: none;-webkit-border-radius: 5px;border:2px solid gray;  background-color: transparent;"  >
+                                <option  class= "selected" disabled selected value="0">What picture do you want to include?</option>
+                                <option  value="url">Image URL Address</option>
+                                <option  value="pp">Instagram Profile Picture</option>
+                        </select><br><br>
+                        <input  id="inputURL" type="text" class="input" name="card_holder" placeholder="Image URL Address"><br><br>
+                        <select id="pic"  class="input" style=" -webkit-appearance: none;-webkit-border-radius: 5px;border:2px solid gray;  background-color: transparent;"  >
+                            <option  class= "selected" disabled selected value="0">Which shape do you want your picture be?</option>
+                            <option  value="round">Circle</option>
+                            <option  value="square">Square</option>
+                        </select><br><br>
+                        <button onclick="next1()" class="btn2">NEXT</button> 
+                        </div>
+
+                        <div id="third"  class="form hide">
                         <div class="hide">
                         <label for="" class="label" style="text-align: center; font-size: 20px;">Background Color</label>
                         <br>
@@ -91,16 +101,16 @@
                         <button onclick="document.body.style.backgroundColor = '#b30000'" class="input" style="width:10px;background:#b30000; border:none; border-radius: 50%;"></button>
                         <button onclick="document.body.style.backgroundColor = '#cc0000'" class="input" style="width:10px;background:#cc0000; border:none; border-radius: 50%;"></button>
                         <button onclick="document.body.style.backgroundColor = '#b34700'" class="input" style="width:10px;background:#b34700; border:none; border-radius: 50%;"></button>
-                       <button onclick="document.body.style.backgroundColor = '#cc5200'" class="input" style="width:10px;background:#cc5200; border:none; border-radius: 50%;"></button>
+                        <button onclick="document.body.style.backgroundColor = '#cc5200'" class="input" style="width:10px;background:#cc5200; border:none; border-radius: 50%;"></button>
                         <button onclick="document.body.style.backgroundColor = '#b3b300'" class="input" style="width:10px;background:#b3b300; border:none; border-radius: 50%;"></button>
                         <button onclick="document.body.style.backgroundColor = '#cccc00'" class="input" style="width:10px;background:#cccc00; border:none; border-radius: 50%;"></button>
                         <button onclick="document.body.style.backgroundColor = '#00b300'" class="input" style="width:10px;background:#00b300; border:none; border-radius: 50%;"></button>
                         <button onclick="document.body.style.backgroundColor = '#00cc66'" class="input" style="width:10px;background:#00cc66; border:none; border-radius: 50%;"></button>
                         <button onclick="document.body.style.backgroundColor = '#002db3'" class="input" style="width:10px;background:#002db3; border:none; border-radius: 50%;"></button>
-                       <button onclick="document.body.style.backgroundColor = '#00b3b3'" class="input" style="width:10px;background:#00b3b3; border:none; border-radius: 50%;"></button>
+                        <button onclick="document.body.style.backgroundColor = '#00b3b3'" class="input" style="width:10px;background:#00b3b3; border:none; border-radius: 50%;"></button>
                         <button onclick="document.body.style.backgroundColor = '#1ac6ff'" class="input" style="width:10px;background:#1ac6ff; border:none; border-radius: 50%;"></button>
                         <button onclick="document.body.style.backgroundColor = '#80ffbf'" class="input" style="width:10px;background:#80ffbf; border:none; border-radius: 50%;"></button>
-                       <button onclick="document.body.style.backgroundColor = '#ff6666'" class="input" style="width:10px;background:#ff6666; border:none; border-radius: 50%;"></button>
+                        <button onclick="document.body.style.backgroundColor = '#ff6666'" class="input" style="width:10px;background:#ff6666; border:none; border-radius: 50%;"></button>
                         <button onclick="document.body.style.backgroundColor = '#1ac6ff'" class="input" style="width:10px;background:#1ac6ff; border:none; border-radius: 50%;"></button>
                         <button onclick="document.body.style.backgroundColor = '#80ffbf'" class="input" style="width:10px;background:#80ffbf; border:none; border-radius: 50%;"></button>
 
@@ -194,6 +204,7 @@
                         <button onclick="document.body.style.backgroundColor = '#80ffbf'" class="input" style="width:10px;background:#80ffbf; border:none; border-radius: 50%;"></button>
 
                         </div>
+                
 
                         <br>
                         <br>
@@ -217,9 +228,10 @@
                         <br>
                         <label for="" class="label" style="text-align: center; font-size: 20px;">Facebook</label>
                         <input  id="facebook"  type="text" class="input" name="card_holder" placeholder="Username">
-                        <button onclick="PushToArray(), downloading()" class="btn2">SEE DEMO</button>       
+                        <button id="urlButton" onclick="PushToArray(), downloading()" class="btn2 hide">URLLLL</button>
+                        <button id="instaButton" onclick="PushToArray(), downloading(),getPhoto($('#insta').val().trim())" class="btn2 hide">INSTAAAAAAA</button>         
               </div>
-                              
+            </div>   
                                
       </div>
   </div>
@@ -367,7 +379,7 @@
 <br>
 <br>
 
-          <h1 id="nameFull" style="text-transform: capitalize;" class=" wow fadeInLeftBig">       fd</h1>
+          <h1 id="nameFull" style="text-transform: capitalize;" class=" wow fadeInLeftBig"></h1>
 
 <br>
 

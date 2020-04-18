@@ -1068,6 +1068,9 @@ color: #ff4d4d;
 .red{
     background:#ff6666;
 }
+.redPH::placeholder{
+    color:red;
+}
   
 .blue{
     background:#1ac6ff;
