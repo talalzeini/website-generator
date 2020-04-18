@@ -30,8 +30,8 @@ function getPhoto(a) {
     
       alert('The username is invalid!')
     }
-  
-  }
+}
+
 
 
 function PushToArray(){
@@ -65,18 +65,19 @@ const body = document.getElementById('body');
 body.classList.remove('hide');
 
 var yourName = document.getElementById('yourName').value;
-console.log("your name is" + yourName)
+console.log("your name is " + yourName)
 var jobTitle1 = document.getElementById('jobTitle1').value;
-console.log("your first job title is" + yourName)
+console.log("your first job title is " + yourName)
 var jobTitle2 = document.getElementById('jobTitle2').value;
-console.log("your second job title is" + yourName)
+console.log("your second job title is " + yourName)
 
-var nameFully = document.getElementById('nameFull');
+var fullName = document.getElementById('nameFull');
 var job1 = document.getElementById('job1');
 var job2 = document.getElementById('job2');
 var navBrand = document.getElementById('navBrand');
 var typeWriter = document.getElementById('boxName4');
 var footerInput = document.getElementById('footerInput');
+fullName.innerText += yourName;
 typeWriter.innerHTML += "Hello, my name is <span style='text-transform:capitalize'>" +  yourName + "</span>.";
 job1.innerText += jobTitle1;
 job2 .innerText += jobTitle2;
@@ -102,7 +103,21 @@ gitLink.href = "https://www.github.com/" + github;
 twitterLink.href = "https://www.twitter.com/" + twitter; 
 fbLink.href="https://www.facebook.com/" + facebook;
 
-document.getElementById('mainNav').style.backgroundColor =  document.body.style.backgroundColor
+
+
+
+
+
+
+}
+
+
+function processData(c1){
+
+var c1 = document.getElementById('color').value;
+document.body.style.backgroundColor += c1;
+window.alert(document.body.style.backgroundColor)
+document.getElementById('mainNav').style.backgroundColor = document.body.style.backgroundColor
 
 }
     
@@ -243,15 +258,21 @@ function next1(){
   
         document.getElementById('instaButton').classList.add('hide');
         document.getElementById('urlButton').classList.remove('hide'); 
+ 
     }
     if(document.getElementById('picImage').value == "pp"){
         document.getElementById('instaButton').classList.remove('hide');
         document.getElementById('urlButton').classList.add('hide');
+
+    }
+    if(document.getElementById('picImage').value == "link"){
+        document.getElementById('instaButton').classList.add('hide');
+        document.getElementById('urlButton').classList.add('hide');
+     
     }
    document.getElementById('third').classList.remove('hide')
    document.getElementById('second').classList.add('hide')
 }
-
 
 
 

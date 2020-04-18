@@ -889,10 +889,53 @@ color: #ff4d4d;
 }
 /* floating animation */
 
+.main {
+    max-width: 1500px;
+    margin: auto;
+}
+
+
+.row {
+    margin: 8px -16px;
+}
+/* padding between each column */
+.row,
+.row > .column {
+    padding: 4px;
+    margin: auto;
+}
+.column {
+    width: 30%;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+.content2 {
+    background-color: white;
+    padding: 10px;
+    border-radius: 50px;
+    transition: all 0.3s;
+}
+.content2:hover{
+    transform: scale(1.015);
+    transition: all 0.3s;
+}
 
 
 
-
+@media screen and (max-width: 980px) {
+    .column {
+        margin-bottom: 5px;
+        flex-basis: 40%;
+    }
+    }
+    @media screen and (max-width: 680px) {
+    .column {
+        flex-basis: 80%;
+    }
+    }
 
 
 
@@ -1096,12 +1139,6 @@ color: #ff4d4d;
 
 
 
-
-
-
-
-
-
 /* payment */
 .payment{
     background-color: #f8f8f8;
@@ -1125,7 +1162,7 @@ color: #ff4d4d;
 }
 .form .input{
     padding:13px 0 13px 25px;
-    width:100%;
+    width:375px;
     border:2px solid #dddddd;
     border-radius: 5px;
     letter-spacing: 1px;
