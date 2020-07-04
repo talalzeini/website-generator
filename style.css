@@ -139,23 +139,23 @@ left:0%;
 right:0%;
 }
 .blueBG{
+    
+    margin:0px auto;
+    position: relative;  
+    height:600px;
+    color:black;
     background: #66a3ff;
     transition: all 0.75s;
-    margin:300px auto; 
-    position: relative;
-    height:750px;
 }
-.blueBG:hover{
-    background: #1974fd;
-    transition: all 0.75s;
-}
+
 .blueHead{
-    margin:50px auto;
-    position: relative; 
-    font-size: 40px; 
+    margin:0px auto;
+    position: relative;
+    font-size: 40px;
     font-weight: bold;
     text-align: center;
-    display: block;
+    display: block; 
+    width:50%; 
 }
 .blueHead1{
     position: relative;
@@ -168,10 +168,10 @@ right:0%;
 @media only screen and (max-width:700px){
 
 .blueHead{
-    top:200px;
+    top:100px;
 }
 .blueHead1{
-    top:200px;
+    top:100px;
     font-size: 15px;
 }
 }
@@ -193,10 +193,7 @@ right:0%;
     background: #99ff99;
     transition: all 0.75s;
 }
-.greenBG:hover{
-    background: #52a152;
-    transition: all 0.75s;
-}
+
 .greenHead{
     margin:50px auto;
     position: relative;
@@ -235,10 +232,20 @@ right:0%;
     font-size: 15px;
 }
 }
+#contact3{
+    background: #99ff99;
+    padding: 4rem 0 8rem;
+
+}
 
 /* contact us styles start */
 #contact1{
     background: black;
+    padding: 4rem 0 8rem;
+
+}
+#contact2{
+    background: #66a3ff;
     padding: 4rem 0 8rem;
 
 }
@@ -364,79 +371,7 @@ height:800px;
     margin: 0 auto; 
     width:50%;
 }
-#media ul {
- list-style: none;
-}
-#media ul li {
-    display: inline-block;
-    position: relative;
-    width:50px;
-    padding:10%;
-}
-#media ul li a{
-    font-size: 50px;
-    color: white;
-    transition: color 0.5s ease-out;
-    border: none;
-    transition: font-size 0.1s ease-out;
-}
-#media ul li a:hover{
-    color:black;
-    width: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height:50px;
-    text-decoration: none;
-}
-#media ul span li a{
-    font-size: 50px;
-    color: white;
-    transition: color 0.5s ease-out;
-    transition: font-size 0.1s ease-out;
-}
-#media ul span li a:hover{
-    color: #38A1F3;
-    width: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height:50px;
-    text-decoration: none;
-}
-#media ul span span li a{
-    font-size: 50px;
-    color: white;
-    transition: color 0.5s ease-out;
-    transition: font-size 0.1s ease-out;
-}
-#media ul span span li a:hover{
-    color: #0e76a8;
-    width: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height:50px;
-    text-decoration: none;
-}
-#media ul span span span li a{
-    font-size: 50px;
-    color: white;
-    transition: color 0.5s ease-out;
-    transition: font-size 0.1s ease-out;    
-}
-#media ul span span span li a:hover{
-    border-radius: 40%;
-    height:42px;
-    color:white;
-    text-decoration: none;
-    width: 42px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: transparent; 
-    background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 90%); 
-}
+
 @media(max-width: 768px){
 
 #media{
@@ -451,4 +386,63 @@ height:800px;
 }
 .black{
     background-color: black;
+}
+
+/* start: footer styles */
+footer {
+    background: #333;
+    padding: 8rem 0;
+}
+
+
+
+footer .footer-subscribe ul li a:hover {
+    color: #fff;
+}
+
+footer small {
+    margin-top: 3rem;
+    font-size: 1rem;
+    display: block;
+    text-align: center;
+}
+
+footer small a {
+    color: #777;
+    text-decoration: none;
+}
+
+footer small a:hover {
+    color: #fff;
+}
+
+/* end: footer styles */
+#media ul {
+
+    list-style: none;
+    text-align: center;
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+#media ul li {
+    padding:20px;
+    text-align: center;
+
+}
+#media ul li a{
+    text-align: center;
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color:white;
+    transition: all 0.05s;
+}
+#media ul li a:hover{
+    color:gray;
+    transition: all 0.05s;
+    text-decoration: none;
 }

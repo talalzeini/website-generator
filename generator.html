@@ -64,7 +64,7 @@
                 <div id="first" class="form">
                         <label for="" class="label" style="text-align: center; font-size: 20px;">Full Name</label>
                         <input  id="yourName" type="text" class="input" name="card_holder" placeholder="First Last"><br><br>
-                        <select id="brandOptions"  class="input" style=" -webkit-appearance: none;-webkit-border-radius: 5px;border:2px solid gray;  background-color: transparent;"  >
+                        3<select id="brandOptions"  class="input" style=" -webkit-appearance: none;-webkit-border-radius: 5px;border:2px solid gray;  background-color: transparent;"  >
                               <option  class= "selected" disabled selected value="0">Do you want your name at the top left corner?</option>
                               <option  value="yes">Yes</option>
                               <option  value="no">No</option>
@@ -73,18 +73,22 @@
                         <input  id="jobTitle1" type="text" class="input" name="card_holder" placeholder="Software Engineer"><br><br>
                         <label for="" class="label" style="text-align: center; font-size: 20px;">Job Title 2</label>
                         <input  id="jobTitle2" type="text" class="input" name="card_holder" placeholder="Web Developer"><br><br><br><br>
+
+                        <!-- <label for="" class="label" style="text-align: center; font-size: 20px;">School</label>
+                        <input  id="schoolTitle" type="text" class="input" name="card_holder" placeholder="UC Berkeley"><br><br><br><br>
+                         -->
+                        <!-- <select id="schoolOptions"  class="input" style=" -webkit-appearance: none;-webkit-border-radius: 5px;border:2px solid gray;  background-color: transparent;"  >
+                            <option  class= "selected" disabled selected value="0">Are you still a student or did you graduate?</option>
+                            <option  value="student">Still a student</option>
+                            <option  value="graduated">Graduated</option>
+                      </select>  -->
+
                         <button onclick="next()" class="btn2">NEXT</button> 
                 </div>
 
 
 
                         <div id="second"  class="form hide">
-                        <select id="picImage"  class="input" style=" -webkit-appearance: none;-webkit-border-radius: 5px;border:2px solid gray;  background-color: transparent;"  >
-                                <option  class= "selected" disabled selected value="0">What picture do you want to include?</option>
-                                <option  value="url">Image URL Address</option>
-                                <option  value="pp">Instagram Profile Picture</option>
-               
-                        </select><br><br>
                         <input  id="inputURL" type="text" class="input" name="card_holder" placeholder="Image URL Address"><br><br>
                         <select id="pic"  class="input" style=" -webkit-appearance: none;-webkit-border-radius: 5px;border:2px solid gray;  background-color: transparent;"  >
                             <option  class= "selected" disabled selected value="0">Which shape do you want your picture be?</option>
@@ -291,127 +295,10 @@
 <br>
 
           <hr class="wow fadeInRightBig" style="background:white; opacity:0.5;">
+
+          <h5>Student at</h5><h5 id="school" style="text-transform: capitalize;" class="wow fadeInLeftBig"></h5> 
 </div>
  
-<div class="main">
-
-    <br><br><br><br><br> <br><br><br><br><br>
-    
-    <!-- Row 1 ends here - C++ - HTML CSS - C#-->  
-    
-    <div class="row">
-    <!-- Column 1 - C++ -->
-                    <div class="column">
-                            <div class="content2 wow fadeInLeftBig">
-                                    <h3  style="color:black; text-align: center; font-style:italic;font-weight: bold; ">C++</h3>
-                                    <p style="color:black;">I learned this language by taking two courses about it at West Valley College, and I was also able to make several interesting projects on my own using it.</p>
-                            </div>
-                    </div>
-    <!-- Column 2 - HTML CSS -->
-                    <div class="column">
-                            <div class="content2 wow fadeInDownBig">
-                                    <h3 style="color:black; text-align: center; font-style:italic; font-weight: bold;">HTML CSS JS</a></h3>
-                                    <p style="color:black;">Using this made me like web developement because I really like designing. I learned a lot with time until I made some projects on my own like this website.</p>
-                            </div>
-                    </div> 
-    <!-- Column 3 - C# -->    
-                    <div class="column">
-                            <div class="content2 wow fadeInRightBig">
-                                   
-                                    <h3 id="college" style="color:black; text-align: center; font-style:italic; font-weight: bold;">C#</h3>
-                                    <p style="color:black;">I started learning this language by watching many youtube tutorials until I became more experienced with it and I even managed to make some games on my own.</p>
-                            </div>
-                    </div>
-    </div>
-    <!-- Row 1 ends here - C++ - HTML CSS - C#-->
-    
-    <!-- Row 2 starts here - School - Childhood - College -->
-    <div class="row">
-    <!-- Column 4 - School -->
-                    <div class="column">
-                            <div class="content2 wow fadeInLeftBig">
-                                    <h3 style="color:black; text-align: center; font-style:italic;font-weight: bold;">School</h3>
-                                    <p style="color:black;">I went to a French school back in my home country, and I took a lot of different courses and learned many materials until I passed the French Baccalaureat.</p>
-                            </div>
-                    </div>
-    <!-- Column 5 - Chilhood -->
-                    <div class="column">
-                            <div class="content2 wow tada ">
-                            
-                                    <h3 style="color:black; text-align: center; font-style:italic; font-weight: bold;" >Childhood</h3>
-                                    <p style="color:black;">I grew up in Lebanon until I moved to California in August 2019, I wish I could have been a part of the incredible revolution that started there in October.</p>
-                            </div>
-                    </div> 
-    <!-- Column 6 - College -->       
-                    <div class="column">
-                            <div class="content2 wow fadeInRightBig">
-                                
-                                    <h3 id="soccer" style="color:black; text-align: center; font-style:italic; font-weight: bold;">College</h3>
-                                    <p style="color:black;">I'm currently taking many courses at West Valley College, hoping to transfer to a good university, majoring in Computer Science which I really like studying.</p>
-                            </div>
-                    </div>
-    </div>  
-    <!-- Row 2 ends here - School - Childhood - College -->
-      
-    <!-- Row 3 starts here - Sports - Languages - Travel --> 
-    <div class="row">
-    <!-- Column 7 - Sports -->
-                    <div class="column">
-                            <div class="content2 wow fadeInLeftBig">
-                             
-                                    <h3 style="color:black; text-align: center; font-style:italic; font-weight: bold;">Sports</h3>
-                                    <p style="color:black;">I always liked practicing sports, specially running. I have a passion for soccer which I played a lot since I was a kid, and I supported Chelsea FC since then.</p>
-                            </div>
-                    </div>
-    <!-- Column 8 - Languages -->
-                    <div class="column">
-                            <div class="content2 wow fadeInUpBig">
-                                    <
-                                    <h3 id="target" style="color:black; text-align: center; font-style:italic; font-weight: bold; font-weight: bold;" >Languages</h3>
-                                    <p style="color:black;">Speaking more than one language fuels the brain. Thankfully, I was able to become a trilingual person. More precisely, I can speak Arabic, English and French.</p>
-                            </div>
-                    </div>
-    <!-- Column 9 - Travel -->  
-                    <div class="column">
-                            <div class="content2 wow fadeInRightBig">
-                    
-                                    <h3 style="color:black; text-align: center; font-style:italic; font-weight: bold;">Travel</h3>
-                                    <p style="color:black;">Traveling enhances creativity. Before moving to the United States of America, I had the privilege of taking a trip to Turkey, Portugal, Greece and even Paris.</p>
-                            </div>
-                    </div>
-    </div>
-    <!-- Row 3 ends here - Sports - Languages - Travel -->
-    
-    <!-- Row 4 starts here - Swift - Target - Unity -->    
-    <div class="row">
-    <!-- Column 10 - Swift -->
-                    <div class="column">
-                            <div class="content2 wow fadeInLeftBig">
-                                
-                                    <h3 style="color:black; text-align: center; font-style:italic; font-weight: bold;">Swift</h3>
-                                    <p style="color:black;">I don't know much about this language, but I tried and learned how to do several projects using it. Hopefully, more projects with this language are coming soon.</p>
-                            </div>
-                    </div>
-    <!-- Column 11 - Target -->
-                    <div class="column">
-                            <div class="content2 wow fadeInUpBig">
-                         
-                                    <h3 style="color:black; text-align: center; font-style:italic; font-weight: bold;">Work</h3>
-                                    <p style="color:black;">I'm currently working hard at Target, in the department of General Merchandise, which helped me gain much experience and become more familiar with the new way of life.</p>
-                            </div>
-                    </div>
-    <!-- Column 12 - Unity --> 
-                    <div class="column">
-                            <div class="content2 wow fadeInRightBig">
-                                  
-                                    <h3 style="color:black; text-align: center; font-style:italic; font-weight: bold;">Unity</h3>
-                                    <p style="color:black;">My first projects were mainly games, and since then I haven't stopped learning new things about Game Developement. I'm working into becoming an expert soon.</p>
-                            </div>
-                    </div>        
-    </div> 
-    <!-- Row 4 ends here - Swift - Target - Unity -->
-    
-    </div> 
 
 
 <!--- Profile box ends here --> 
