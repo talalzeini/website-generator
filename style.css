@@ -6,7 +6,9 @@ html, body{
     overflow-x: hidden;
     background-color: white;
     z-index: 1;
+    min-height: 100vh;
 }
+
 .navigation{
     position: relative;
     width: 100%;
@@ -25,7 +27,7 @@ html, body{
     text-transform:capitalize; 
     letter-spacing: 2px;  
     font-style: italic; 
-    font-size: 30px;  
+    font-size: 20px;  
 }
 .sign{
     position: relative;
@@ -46,8 +48,12 @@ html, body{
     color:white;
     background-color: #66a3ff;
 }
+.flex{
+    display:flex;
+    justify-content:space-between;
+}
 .hero{
-    height: 100vh;
+    height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -55,42 +61,24 @@ html, body{
 .header{
     width:100%;
     position: absolute;
-    top:150px; 
+    top:200px; 
     left:0%;
+    margin-top: 50px;
 }
 .mainHeader{
     color:black;
     text-align: center;
     font-weight: 800;
-    font-size:4vw;
+    font-size:60px;
 }
+
 .mainParagraph{
-        color:black;
-        width:45%; 
-        display: block; 
-        margin: auto; 
-        text-align: center;
-}
-.GetStarted{
-    position: relative;
-    top:30px;
-    height:65px;
-    width:200px;
-    border: 3px solid #66a3ff;
     color:black;
-    border-radius: 30px;
+    width:45%; 
+    font-size: 15px;
+    display: block; 
+    margin: auto; 
     text-align: center;
-    display: block;
-    margin:0 auto;
-    font-size: 20px;
-    color:white;
-    background-color: #66a3ff;
-    transition: all 0.75s;
-}
-.GetStarted:hover{  
-    color:#66a3ff;
-    background-color: white;
-    transition: all 0.75s;
 }
 .scroll-down{
     position: relative; 
@@ -108,6 +96,76 @@ html, body{
     -webkit-transform: translate(-50%, 0) rotate(0deg);
     animation: fadeDown 3s cubic-bezier(0.19, 1, 0.22, 1) infinite;
 }
+@media (max-width:700px){
+    .mainHeader{
+        color:red;
+        text-align: center;
+        font-weight: 800;
+        font-size:45px;
+    }
+}
+@media (max-width:500px){
+    .header{
+        width:100%;
+        position: absolute;
+        top:200px; 
+        left:0%;
+        margin-top: 0px;
+    }
+    .mainHeader{
+        color:black;
+        text-align: center;
+        font-weight: 800;
+        font-size:40px;
+    }
+    .mainParagraph{
+        color:black;
+        width:80%; 
+        font-size: 15px;
+        display: block; 
+        margin: auto; 
+        text-align: center;
+}
+.scroll-down{
+    position: relative; 
+    top: 15px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 20px;
+    z-index: 0;
+    text-decoration: none;
+    text-shadow: 0;
+    width: 13px;
+    height: 13px;
+    border-bottom: 3px solid black;
+    border-right: 3px solid black;
+    -webkit-transform: translate(-50%, 0) rotate(0deg);
+    animation: fadeDown 3s cubic-bezier(0.19, 1, 0.22, 1) infinite;
+}
+}
+
+.GetStarted{
+    position: relative;
+    top:30px;
+    height:65px;
+    width:200px;
+    border: 3px solid #66a3ff;
+    color:black;
+    border-radius: 10px;
+    text-align: center;
+    display: block;
+    margin:0 auto;
+    font-size: 20px;
+    color:white;
+    background-color: #66a3ff;
+    transition: all 0.75s;
+}
+.GetStarted:hover{  
+    color:#66a3ff;
+    background-color: white;
+    transition: all 0.75s;
+}
+
 @keyframes fadeDown {
     0% {
           transform: translate(0, -20px) rotate(45deg);
@@ -122,12 +180,13 @@ html, body{
     }
 }
 .websiteImage{
-    width: 1000px;
+    width: 900px;
     position:relative;
     top:350px; 
-     border-radius:30px 30px 0px 0px;
+     /* border-radius:30px 30px 0px 0px; */
+     border-radius: 20px;
      z-index:3;
-     border:20px solid gray;
+     /* border:20px solid gray; */
 }
 .laptopHR{
 border-radius: 10px 10px 30px 30px;
@@ -139,8 +198,7 @@ left:0%;
 right:0%;
 }
 .blueBG{
-    
-    margin:0px auto;
+
     position: relative;  
     height:600px;
     color:black;
@@ -165,6 +223,7 @@ right:0%;
     margin: 0 auto; 
     width:50%;
 }
+
 @media only screen and (max-width:700px){
 
 .blueHead{
@@ -232,26 +291,17 @@ right:0%;
     font-size: 15px;
 }
 }
-#contact3{
-    background: #99ff99;
-    padding: 4rem 0 8rem;
 
-}
-
-/* contact us styles start */
 #contact1{
     background: black;
     padding: 4rem 0 8rem;
 
 }
-#contact2{
-    background: #66a3ff;
-    padding: 4rem 0 8rem;
 
-}
 #contact{
-    background: #ff9999;
+    background: white;
     padding: 4rem 0 8rem;
+    margin-top: 300px;
 
 }
 #contact h2{
@@ -278,12 +328,14 @@ right:0%;
 #form-container input, 
 #form-container textarea{
     text-indent: 10px;
+    outline:none;
     display:block;
+    
     margin-top: 1rem;
     padding:10px;
     color:black;
     border-radius: 20px;
-    border:1px solid rgba(0,0,0,0.1);
+    border:1px solid #66a3ff;
     box-sizing: border-box;
     height:43px;
     width:100%;
@@ -325,7 +377,7 @@ color:  #1ab2ff;
     display:block; 
     margin:0 auto;
     position: relative;
-    top:20px;
+    top:0px;
     width:125px;
     border: 3px solid #66a3ff;
     color:black;
@@ -389,32 +441,7 @@ height:800px;
 }
 
 /* start: footer styles */
-footer {
-    background: #333;
-    padding: 8rem 0;
-}
 
-
-
-footer .footer-subscribe ul li a:hover {
-    color: #fff;
-}
-
-footer small {
-    margin-top: 3rem;
-    font-size: 1rem;
-    display: block;
-    text-align: center;
-}
-
-footer small a {
-    color: #777;
-    text-decoration: none;
-}
-
-footer small a:hover {
-    color: #fff;
-}
 
 /* end: footer styles */
 #media ul {
@@ -445,4 +472,53 @@ footer small a:hover {
     color:gray;
     transition: all 0.05s;
     text-decoration: none;
+}
+
+@media (max-width: 767px) {
+    #contact .flex {
+        flex-wrap: wrap;
+    }
+
+    #form-container {
+        width: 100%;
+        padding: 2rem;
+    }
+
+    #address-container {
+        width: 100%;
+        margin-top: 2rem;
+    }
+}
+@media (max-width: 500px) {
+#contact {
+    padding: 4rem 0;
+}
+
+#contact h2 {
+    margin-bottom: 2rem;
+}
+
+#form-container {
+    padding: 1.5rem;
+}
+}
+footer {
+    position: relative;
+    height: 0px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+p.copyright {
+    position: absolute;
+    width: 100%;
+    color: #fff;
+    line-height: 100px;
+    font-size: 15px;
+    text-align: center;
+    bottom:0;
+}
+p.copyright span {
+    font-size: 20px;
 }
