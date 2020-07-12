@@ -36,7 +36,7 @@ var jobTitle1 = document.getElementById('jobTitle1').value;
 console.log("your first job title is " + yourName)
 var jobTitle2 = document.getElementById('jobTitle2').value;
 console.log("your second job title is " + yourName)
-var schoolTitle = document.getElementById('schoolTitle').value;
+
 
 var fullName = document.getElementById('nameFull');
 var job1 = document.getElementById('job1');
@@ -44,14 +44,14 @@ var job2 = document.getElementById('job2');
 var navBrand = document.getElementById('navBrand');
 var typeWriter = document.getElementById('boxName4');
 var footerInput = document.getElementById('footerInput');
-var school = document.getElementById('school');
+
 fullName.innerText += yourName;
 typeWriter.innerHTML += "Hello, my name is <span style='text-transform:capitalize'>" +  yourName + "</span>.";
 job1.innerText += jobTitle1;
 job2 .innerText += jobTitle2;
 navBrand.innerText += yourName;
 footerInput.innerHTML += "<span>&copy;</span> " + yourName + " 2020"
-school.innerText += schoolTitle
+
 
 
 // Social media are called here
@@ -109,37 +109,37 @@ download("index.html",eh);
 console.log("downloading() function is called and index.html available to download.")
 }
     
-// contact
-$(document).ready(function(){
-$('.submit').click(function(event){
-console.log('Clicked button')
+// // contact
+// $(document).ready(function(){
+// $('.submit').click(function(event){
+// console.log('Clicked button')
         
-var name=$('.name').val()
-var email =$('.email').val()
-var subject =$('.subject').val()
-var message =$('.message').val()
-var statusElm =$('.status')
-statusElm.empty()
+// var name=$('.name').val()
+// var email =$('.email').val()
+// var subject =$('.subject').val()
+// var message =$('.message').val()
+// var statusElm =$('.status')
+// statusElm.empty()
 
-if(email.length > 5 && email.includes('@') && email.includes('.')){
-    statusElm.append('')
-    } else {
-    statusElm.append('<div style="color:red; text-align:center;">The email you entered is not valid.<br><br></div>')
-    event.preventDefault()
-    }
+// if(email.length > 5 && email.includes('@') && email.includes('.')){
+//     statusElm.append('')
+//     } else {
+//     statusElm.append('<div style="color:red; text-align:center;">The email you entered is not valid.<br><br></div>')
+//     event.preventDefault()
+//     }
 
 
 
-    if(message.length != 0){
-    statusElm.append('')
-} else {
-    statusElm.append('<div style="color:red; text-align:center;">Your message is empty.<br><br></div>')
-    event.preventDefault()
-    }
+//     if(message.length != 0){
+//     statusElm.append('')
+// } else {
+//     statusElm.append('<div style="color:red; text-align:center;">Your message is empty.<br><br></div>')
+//     event.preventDefault()
+//     }
 
-})
+// })
 
-})
+// })
  
 // 
 function next(){
