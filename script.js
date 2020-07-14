@@ -9,7 +9,6 @@ var array = [];
 
 function PushToArray(){
 
-
 if( document.getElementById('brandOptions').value == "yes"){
         document.getElementById('navBrand').classList.remove('hide');
         document.getElementById('brand').classList.remove('hide');
@@ -99,7 +98,6 @@ element.style.display = 'none';
 document.body.appendChild(element);
       
 element.click();
-      
 document.body.removeChild(element);
 console.log("download() function is called.")
 }
@@ -109,41 +107,11 @@ download("index.html",eh);
 console.log("downloading() function is called and index.html available to download.")
 }
     
-// // contact
-// $(document).ready(function(){
-// $('.submit').click(function(event){
-// console.log('Clicked button')
-        
-// var name=$('.name').val()
-// var email =$('.email').val()
-// var subject =$('.subject').val()
-// var message =$('.message').val()
-// var statusElm =$('.status')
-// statusElm.empty()
-
-// if(email.length > 5 && email.includes('@') && email.includes('.')){
-//     statusElm.append('')
-//     } else {
-//     statusElm.append('<div style="color:red; text-align:center;">The email you entered is not valid.<br><br></div>')
-//     event.preventDefault()
-//     }
 
 
 
-//     if(message.length != 0){
-//     statusElm.append('')
-// } else {
-//     statusElm.append('<div style="color:red; text-align:center;">Your message is empty.<br><br></div>')
-//     event.preventDefault()
-//     }
-
-// })
-
-// })
- 
-// 
+   
 function next(){
-
 if(document.getElementById('yourName').value.trim().length == 0 && document.getElementById('jobTitle1').value.trim().length == 0 && document.getElementById('jobTitle2').value.trim().length == 0 ){
     window.alert("You must fill out this form properly in order to proceed.");
     document.getElementById('yourName').classList.add('redPH');
@@ -184,12 +152,14 @@ if(document.getElementById('yourName').value.trim().length == 0 && !document.get
     document.getElementById('jobTitle1').classList.add('redPH');
     return;
 }
-    document.getElementById('first').classList.add('hide')
-    document.getElementById('second').classList.remove('hide')
+
+document.getElementById("firstForm").classList.add("hide")
+document.getElementById("secondForm").classList.remove("hide")
+
 }
 
     
-function next1(){
+function secondNext(){
     if(document.getElementById('pic').value == "0" ){
         window.alert("You must fill out this form properly in order to proceed.");
         return;
@@ -206,19 +176,9 @@ function next1(){
         document.getElementById('image').classList.remove('round');
         document.getElementById('image').classList.add('square');
     }
-
-
-
         var inputURL = document.getElementById('inputURL').value;
         var image = document.getElementById('image');
         image.src = inputURL;
-  
-        document.getElementById('instaButton').classList.add('hide');
-        document.getElementById('urlButton').classList.remove('hide'); 
- 
-
-   document.getElementById('third').classList.remove('hide')
-   document.getElementById('second').classList.add('hide')
 }
 
 

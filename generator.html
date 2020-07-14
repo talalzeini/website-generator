@@ -24,7 +24,7 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/v4-shims.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
 <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
 <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
 <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
 
@@ -48,7 +48,7 @@
 
 
  
-<div id="inputs">
+<div id="inputs" class="">
     
 
 
@@ -57,103 +57,33 @@
             
 
 
-    <div id="paymentForm" class="wrap hide">
-      <br>
-      <div class="payment hide">
-              <h2 style=color:black;>Information</h2>
-                <div id="first" class="form">
-                        <label for="" class="label" style="text-align: center; font-size: 20px;">Full Name</label>
-                        <input  id="yourName" type="text" class="input" name="card_holder" placeholder="First Last"><br><br>
-                        <select id="brandOptions"  class="input" style=" -webkit-appearance: none;-webkit-border-radius: 5px;border:2px solid gray;  background-color: transparent;"  >
-                              <option  class= "selected" disabled selected value="0">Do you want your name at the top left corner?</option>
-                              <option  value="yes">Yes</option>
-                              <option  value="no">No</option>
-                        </select><br><br>
-                        <label for="" class="label" style="text-align: center; font-size: 20px;">Job Title 1</label>
-                        <input  id="jobTitle1" type="text" class="input" name="card_holder" placeholder="Software Engineer"><br><br>
-                        <label for="" class="label" style="text-align: center; font-size: 20px;">Job Title 2</label>
-                        <input  id="jobTitle2" type="text" class="input" name="card_holder" placeholder="Web Developer"><br><br><br><br>
-                        <button onclick="next()" class="btn2">NEXT</button> 
-                </div>
-
-
-
-                        <div id="second"  class="form hide">
-                        <input  id="inputURL" type="text" class="input" name="card_holder" placeholder="Image URL Address"><br><br>
-                        <select id="pic"  class="input" style=" -webkit-appearance: none;-webkit-border-radius: 5px;border:2px solid gray;  background-color: transparent;"  >
-                            <option  class= "selected" disabled selected value="0">Which shape do you want your picture be?</option>
-                            <option  value="round">Circle</option>
-                            <option  value="square">Square</option>
-                        </select><br><br>
-                        <button onclick="next1()" class="btn2">NEXT</button> 
-                        </div>
-
-                        <div id="third"  class="form hide">
-                        <div style="text-align: center;">
-                        <label for="" class="label" style="text-align: center; font-size: 20px;">Background Color</label>
-                        <br>
-                            
-                                <input style="height:200px; width:400px;" type="color" name='data' id="color">
-
-
-                        </div>
-                
-
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <label for="" class="label" style="text-align: center; font-size: 25px;">Social Media</label>
-                        <br>
-                        <br>
-                        <label for="" class="label" style="text-align: center; font-size: 20px;">Instagram</label>
-                        <input  id="insta"  type="text" class="input" name="card_holder" placeholder="Username">
-                        <br>
-                        <br>
-                        <label for="" class="label" style="text-align: center; font-size: 20px;">Twitter</label>
-                        <input  id="twitter"  type="text" class="input" name="card_holder" placeholder="Username">
-                        <br>
-                        <br>
-                        <label for="" class="label" style="text-align: center; font-size: 20px;">GitHub</label>
-                        <input  id="github"  type="text" class="input" name="card_holder" placeholder="Username">
-                        <br>
-                        <br>
-                        <label for="" class="label" style="text-align: center; font-size: 20px;">Facebook</label>
-                        <input  id="facebook"  type="text" class="input" name="card_holder" placeholder="Username">
-                        <button id="urlButton" onclick="PushToArray(), downloading(), processData('data')" class="btn2 hide">URLLLL</button>
-                        <button id="instaButton" onclick="PushToArray(), downloading(),getPhoto($('#insta').val().trim())" class="btn2 hide">INSTAAAAAAA</button>        
-              </div>
-            </div>   
-                               
-      </div>
-  </div>
-</div>
-
+   
+                     
+                       
+    
 
 
 
 <div id="wrapper">
 <div style="text-align:center;">
-    <div class="form-data ">
+    <div id="firstForm" class="form-data">
                                 <form action="" >
                                         <p id="date" style="font-size: 12px;font-weight: bold;"></p>
                                         <h1 style="margin-bottom: 30px;">WEBERATOR</h1>
-                                         <div style="display:inline-block;">  
-                                            <input id="firstName" type="text" style="float:left; width:49%;" class="input" placeholder="First">
-                                            <input id="lastName" type="text" style="float:right;width:49%;" class="input1" placeholder="Last">  
-                                         </div>  
-                                            <input id="username" type="text" class="input" placeholder="Phone number">
-                                            <input id="email" type="text" class="input" placeholder="Email Address">
-                                            <input id="password" type="password" secure  class="input" placeholder="Date of Birth (MM/DD/YYYY)">
-                                            <input id="job" type="text"   class="input" placeholder="First Job Title">
-                                            <input id="job" type="text"   class="input" placeholder="Second Job Title">
-                                        <button onclick="nextButtonPressed()" class="form-btn">Next</button>
-                                      
+                                         <!-- <div style="display:inline-block;">   -->
+                                            <input id="yourName" type="text" style="float:left;" class="input" placeholder="First">
+                                            <!-- <input id="lastName" type="text" style="float:right;width:49%;" class="input1" placeholder="Last">   -->
+                                         <!-- </div>   -->
+                                            <!-- <input id="username" type="text" class="input" placeholder="Phone number"> -->
+                                            <!-- <input id="email" type="text" class="input" placeholder="Email Address"> -->
+                                            <!-- <input id="password" type="password" secure  class="input" placeholder="Date of Birth (MM/DD/YYYY)"> -->
+                                            <input id="jobTitle1" type="text"   class="input" placeholder="First Job Title">
+                                            <input id="jobTitle2" type="text"   class="input" placeholder="Second Job Title">
+                                        <a  onclick="next()" class="form-btn">Next</a>
                                 </form>            
     </div>
-    <div class="form-data hide">
-        <form action="" >
+    <div id="secondForm" class="form-data hide">
+        <form action="">
                 <p id="date" style="font-size: 12px;font-weight: bold;"></p>
                 <h1 style="margin-bottom: 30px;">WEBERATOR</h1>
                 <select id="brandOptions"  class="input" style=" -webkit-appearance: none;-webkit-border-radius: 5px;border:2px solid #eee;  background-color: transparent; color:gray;" >
@@ -166,26 +96,19 @@
                 <option  value="round">Circle</option>
                 <option  value="square">Square</option>
             </select>
-                     <input  id="inputURL" type="text" class="input" name="card_holder" placeholder="Image URL Address">
-                    <input id="username" type="text" class="input" placeholder="Instagram Username">
-                    <input id="email" type="text" class="input" placeholder="Twitter Username">
-                    <input id="password" type="password" secure  class="input" placeholder="Github Username">
-                    <input id="job" type="text"   class="input" placeholder="Facebook Username">
+                    <input  id="inputURL" type="text" class="input" name="card_holder" placeholder="Image URL Address">
+                    <input id="insta" type="text" class="input" placeholder="Instagram Username">
+                    <input id="twitter" type="text" class="input" placeholder="Twitter Username">
+                    <input id="github" type="password" secure  class="input" placeholder="Github Username">
+                    <input id="facebook" type="text"   class="input" placeholder="Facebook Username">
                    
-                <button onclick="nextButtonPressed()" class="form-btn">Next</button>
+                <a class="form-btn" onclick="PushToArray(), downloading()" >Next</a>
               
         </form>            
 </div>
 </div>
 </div>
-
-
-
-
-
-
-
-
+</div>
 
 
 
@@ -1611,7 +1534,8 @@ color: #ff4d4d;
 <!--- Copy right ends here -->
 
 </div>
-  
+  <script>
+  </script>
 
 </body>
 <!--- Body ends here -->
