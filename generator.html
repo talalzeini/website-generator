@@ -60,9 +60,6 @@
    
                      
                        
-    
-
-
 
 <div id="wrapper">
 <div style="text-align:center;">
@@ -70,6 +67,7 @@
                                 <form action="" >
                                         <p id="date" style="font-size: 12px;font-weight: bold;"></p>
                                         <h1 style="margin-bottom: 30px;">WEBERATOR</h1>
+                                        
                                          <div style="display:inline-block;">  
                                             <input id="yourName" type="text" style="float:left;width:49%;" class="input" placeholder="First">
                                             <input id="lastName" type="text" style="float:right;width:49%;" class="input1" placeholder="Last">   
@@ -80,9 +78,15 @@
                                             <input id="ageInput" type="text"  class="input" placeholder="Age"> 
                                             <input id="jobTitle1" type="text"   class="input" placeholder="First Job Title">
                                             <input id="jobTitle2" type="text"   class="input" placeholder="Second Job Title">
+                                            <input  type="file" id="myFile" style="color:black;">
                                         <a  onclick="next()" id="next-btn">Next</a>
-                                </form>            
+
+                                </form>     
+                           
+
+                                 
     </div>
+    
     <div id="secondForm" class="form-data hide">
         <form action="">
                 <p id="date" style="font-size: 12px;font-weight: bold;"></p>
@@ -220,8 +224,10 @@
           <h5 id="job2" style="text-transform: capitalize;" class=" fadeInLeftBig"></h5> 
 
 <br>
+<a href="" download="" id="resume">RESUME</a>
 
           <hr class=" fadeInRightBig" style="background:white; opacity:0.5;">
+
 
 </div>
  
@@ -238,7 +244,7 @@
   
     <div id="address-container" style="display:block; margin:0 auto; width:400px;">
     
-        <h2 style="margin-top:25px;margon-bottom:5px;font-size:25px; color:black;">About You</h2>
+        <h2 style="margin-top:25px;margon-bottom:5px;font-size:25px; color:black;">About Myself</h2>
         <label style="color:black; text-align: center;" for="">Phone Number</label>
         <a style="display:block; margin:0 auto; color:#66a3ff;text-align: center;" id="numberId"></a>
         <label style="color:black;text-align: center;" for="">Email Address</label>
@@ -471,7 +477,31 @@ p.copyright span{
           }
     }
 }
-
+#resume{
+    width:200px; 
+    padding:10px 25px; 
+    border-radius: 30px; 
+    border:2px solid white; 
+    background-color: black; 
+    display: block; 
+    margin: 0px auto; 
+    color: white;
+    text-align: center; 
+    transition: all 0.5s ease-out;
+}
+#resume:hover{
+    text-decoration: none;
+    width:200px; 
+    padding:10px 25px; 
+    border-radius: 30px; 
+    border:2px solid white; 
+    background-color: white; 
+    display: block; 
+    margin: 0px auto; 
+    color: black;
+    text-align: center; 
+    transition: all 0.5s ease-out;
+}
 @keyframes typewriter2 {
     from {
           width: 0;
@@ -891,7 +921,7 @@ height: 1px;
 
 }
 #media ul li a:hover{
- color:black;
+ color:gray;
  width: 50px;
  display: flex;
  align-items: center;
@@ -1107,12 +1137,11 @@ top: 100px;
 font-family: 'Courier New', sans-serif;
 }
 .box-img{
-background: url(../images/mainimage.jpg);
+
 background:cover;
 background-size:100%;
 width: 250px;
 transform: translatey(0px);
-
 height: 250px;
 transition: all 0.1s ease-out;
 }

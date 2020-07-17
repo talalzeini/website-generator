@@ -127,9 +127,12 @@ console.log("downloading() function is called and index.html available to downlo
 
 
 
-   
 function next(){
     // if all empty
+    var resumeInput = document.getElementById("myFile").files[0].name;
+    console.log(resumeInput);
+    document.getElementById('resume').href = resumeInput
+    document.getElementById('resume').download = resumeInput;
 if(document.getElementById('yourName').value.trim().length == 0 && document.getElementById('lastName').value.trim().length == 0 && document.getElementById('jobTitle1').value.trim().length == 0 && document.getElementById('jobTitle2').value.trim().length == 0 ){
     window.alert("You must fill out this form properly in order to proceed.");
     document.getElementById('yourName').classList.add('redPH');
