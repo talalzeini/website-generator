@@ -24,13 +24,15 @@ if(document.getElementById('brandOptions').value == "no"){
 }
 
    
-const inputs = document.getElementById('inputs');
-inputs.classList.add('hide');
-const body = document.getElementById('body');
-body.classList.remove('hide');
+// const inputs = document.getElementById('inputs');
+// inputs.classList.add('hide');
+// const body = document.getElementById('body');
+// body.classList.remove('hide');
 
 var yourName = document.getElementById('yourName').value;
-console.log("your name is " + yourName)
+console.log("your first name is " + yourName)
+var lastName = document.getElementById('lastName').value;
+console.log("your last name is " + lastName)
 var jobTitle1 = document.getElementById('jobTitle1').value;
 console.log("your first job title is " + yourName)
 var jobTitle2 = document.getElementById('jobTitle2').value;
@@ -44,11 +46,11 @@ var navBrand = document.getElementById('navBrand');
 var typeWriter = document.getElementById('boxName4');
 var footerInput = document.getElementById('footerInput');
 
-fullName.innerText += yourName;
-typeWriter.innerHTML += "Hello, my name is <span style='text-transform:capitalize'>" +  yourName + "</span>.";
+fullName.innerText = yourName + " " + lastName;
+typeWriter.innerHTML += "Hello, my name is <span style='text-transform:capitalize'>" +  yourName + " " + lastName + "</span>.";
 job1.innerText += jobTitle1;
 job2 .innerText += jobTitle2;
-navBrand.innerText += yourName;
+navBrand.innerText = yourName;
 footerInput.innerHTML += "<span>&copy;</span> " + yourName + " 2020"
 
 
