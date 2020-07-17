@@ -37,7 +37,15 @@ var jobTitle1 = document.getElementById('jobTitle1').value;
 console.log("your first job title is " + yourName)
 var jobTitle2 = document.getElementById('jobTitle2').value;
 console.log("your second job title is " + yourName)
-
+emailId
+var emailInput = document.getElementById('emailInput').value;
+console.log("your email is " + emailInput)
+var ageInput  = document.getElementById('ageInput').value;
+console.log("your age is " + ageInput)
+var numberInput = document.getElementById('numberInput').value;
+console.log("your phone number is " + numberInput)
+var birthInput = document.getElementById('birthInput').value;
+console.log("your birth date is " + birthInput)
 
 var fullName = document.getElementById('nameFull');
 var job1 = document.getElementById('job1');
@@ -45,15 +53,22 @@ var job2 = document.getElementById('job2');
 var navBrand = document.getElementById('navBrand');
 var typeWriter = document.getElementById('boxName4');
 var footerInput = document.getElementById('footerInput');
+var emailId = document.getElementById('emailId');
+var ageId = document.getElementById('ageId');
+var numberId = document.getElementById('numberId');
+var birthId = document.getElementById('birthId');
+
 
 fullName.innerText = yourName + " " + lastName;
 typeWriter.innerHTML += "Hello, my name is <span style='text-transform:capitalize'>" +  yourName + " " + lastName + "</span>.";
 job1.innerText += jobTitle1;
 job2 .innerText += jobTitle2;
 navBrand.innerText = yourName;
-footerInput.innerHTML += "<span>&copy;</span> " + yourName + " 2020"
-
-
+footerInput.innerHTML += "<span>&copy;</span> " + yourName + " " + lastName + " 2020"
+emailId.innerText = emailInput
+ageId.innerText = ageInput
+numberId.innerText = numberInput
+birthId.innerText = birthInput
 
 // Social media are called here
 
@@ -114,9 +129,11 @@ console.log("downloading() function is called and index.html available to downlo
 
    
 function next(){
-if(document.getElementById('yourName').value.trim().length == 0 && document.getElementById('jobTitle1').value.trim().length == 0 && document.getElementById('jobTitle2').value.trim().length == 0 ){
+    // if all empty
+if(document.getElementById('yourName').value.trim().length == 0 && document.getElementById('lastName').value.trim().length == 0 && document.getElementById('jobTitle1').value.trim().length == 0 && document.getElementById('jobTitle2').value.trim().length == 0 ){
     window.alert("You must fill out this form properly in order to proceed.");
     document.getElementById('yourName').classList.add('redPH');
+    document.getElementById('lastName').classList.add('redPH');
     document.getElementById('jobTitle1').classList.add('redPH');
     document.getElementById('jobTitle2').classList.add('redPH');
     return;
@@ -127,9 +144,10 @@ if(!document.getElementById('yourName').value.trim().length == 0 && document.get
     document.getElementById('jobTitle2').classList.add('redPH');
     return;
 }  
-if(document.getElementById('yourName').value.trim().length == 0 && !document.getElementById('jobTitle1').value.trim().length == 0 && document.getElementById('jobTitle2').value.trim().length == 0 ){
+if(document.getElementById('yourName').value.trim().length == 0 && document.getElementById('lastName').value.trim().length == 0 && !document.getElementById('jobTitle1').value.trim().length == 0 && document.getElementById('jobTitle2').value.trim().length == 0 ){
     window.alert("You must enter your name and two job titles in order to proceed.");
     document.getElementById('yourName').classList.add('redPH');
+    document.getElementById('lastName').classList.add('redPH');
     document.getElementById('jobTitle2').classList.add('redPH');
     return;
 }   

@@ -74,12 +74,13 @@
                                             <input id="yourName" type="text" style="float:left;width:49%;" class="input" placeholder="First">
                                             <input id="lastName" type="text" style="float:right;width:49%;" class="input1" placeholder="Last">   
                                           </div>  
-                                            <!-- <input id="username" type="text" class="input" placeholder="Phone number"> -->
-                                            <!-- <input id="email" type="text" class="input" placeholder="Email Address"> -->
-                                            <!-- <input id="password" type="password" secure  class="input" placeholder="Date of Birth (MM/DD/YYYY)"> -->
+                                             <input id="numberInput" type="text" class="input" placeholder="Phone number"> 
+                                             <input id="emailInput" type="text" class="input" placeholder="Email Address"> 
+                                             <input id="birthInput" type="text"  class="input" placeholder="Date of Birth (MM/DD/YYYY)"> 
+                                            <input id="ageInput" type="text"  class="input" placeholder="Age"> 
                                             <input id="jobTitle1" type="text"   class="input" placeholder="First Job Title">
                                             <input id="jobTitle2" type="text"   class="input" placeholder="Second Job Title">
-                                        <a  onclick="next()" class="form-btn">Next</a>
+                                        <a  onclick="next()" id="next-btn">Next</a>
                                 </form>            
     </div>
     <div id="secondForm" class="form-data hide">
@@ -99,7 +100,7 @@
                     <input  id="inputURL" type="text" class="input" name="card_holder" placeholder="Image URL Address">
                     <input id="insta" type="text" class="input" placeholder="Instagram Username">
                     <input id="twitter" type="text" class="input" placeholder="Twitter Username">
-                    <input id="github" type="password" secure  class="input" placeholder="Github Username">
+                    <input id="github" type="text"  class="input" placeholder="Github Username">
                     <input id="facebook" type="text"   class="input" placeholder="Facebook Username">
                    
                 <a class="form-btn" onclick="PushToArray(), downloading()">Download</a>
@@ -201,7 +202,7 @@
 <!--- Profile box starts here --> 
 <div class= "box">
 
-       <div class=" fadeInRightBig"><img  id="image" class="box-img square"></img></div>
+       <div><img  id="image" class="box-img square"></img></div>
           
 
 <br>
@@ -231,6 +232,34 @@
 <br>
 <br>
 
+
+
+<section id="contact1">
+  
+    <div id="address-container" style="display:block; margin:0 auto; width:400px;">
+    
+        <h2 style="margin-top:25px;margon-bottom:5px;font-size:25px; color:black;">About You</h2>
+        <label style="color:black; text-align: center;" for="">Phone Number</label>
+        <a style="display:block; margin:0 auto; color:#66a3ff;text-align: center;" id="numberId"></a>
+        <label style="color:black;text-align: center;" for="">Email Address</label>
+        <a  style="display:block; margin:0 auto;color:#66a3ff;text-align: center;" id="emailId"></a>
+        <label style="color:black;text-align: center;" for="">Age</label>
+        <a  style="display:block; margin:0 auto;color:#66a3ff;text-align: center;" id="ageId"></a>
+        <label style="color:black;text-align: center;" for="">Date of Birth</label>
+        <a  style="display:block; margin:0 auto;color:#66a3ff;text-align: center;" id="birthId"></a>
+  
+    </div> 
+    </section>
+
+
+
+
+
+
+
+
+
+
 <!--- Footer class starts here --> 
 <div class="footer">
                             <div class="container">
@@ -259,11 +288,13 @@
 <br>
 <br>
 
+
                 <div class="col-lg-4" id="media">
                     
                                                                   
-
-
+                    <section id="contact1">
+  
+                        
 <!--- Social media icons starts here -->                                         
 <ul>
 
@@ -1081,7 +1112,7 @@ background:cover;
 background-size:100%;
 width: 250px;
 transform: translatey(0px);
-animation: float 6s ease-in-out infinite;
+
 height: 250px;
 transition: all 0.1s ease-out;
 }
@@ -1094,14 +1125,7 @@ border-radius: 50%;
     border-radius: 0%;
 }
 
-.box-img:hover { 
-    background: url(../images/wink.jpg);
-    background:cover;
-    background-size:100%;
-    border-radius: 50%;
-    width: 250px;
-    height: 250px;
-}
+
 .box h1{
 
 font-size: 40px;
@@ -1530,6 +1554,71 @@ color: #ff4d4d;
     background:white;
     color:#1ab2ff;
 }
+
+
+
+#contact1{
+  
+  padding: 4rem 0 8rem;
+
+}
+#contact1 h2{
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+#address-container{
+  width:38%;
+  background-color: white;
+  box-sizing: border-box;
+  padding:1.5rem;
+  height:0%;
+  border-radius: 12px;
+}
+#address-container label{
+  margin-top: 2rem;
+  display: block;
+}
+#address-container label:first-child{
+  margin-top: 0;
+}
+#address-container address{
+  margin-bottom: 1.5rem;
+  font-style: normal;
+}
+#address-container a{
+text-decoration: none;
+color:  #1ab2ff;
+}
+#address-container a:hover{
+  text-decoration: underline;
+}
+.submit{
+  display:block; 
+  margin:0 auto;
+  position: relative;
+  top:0px;
+  width:125px;
+  border: 3px solid #66a3ff;
+  color:black;
+  border-radius: 30px;
+  height:40px;
+  color:#66a3ff;
+  background-color: white;
+  transition: all 0.75s;
+}
+.submit:hover{
+  border: 3px solid #66a3ff;
+  color:white;
+  transition: all 0.75s;
+  background-color: #66a3ff;
+}
+
+
+
+
+
+
 </style>
 <!--- Copy right ends here -->
 
