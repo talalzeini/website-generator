@@ -14,8 +14,14 @@
 <script src="https://use.fontawesome.com/aac5c45839.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
-<title>Website Generator</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/95dc93da07.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+<title>Weberator</title>
 
 <link rel="stylesheet" href="generator.css"> 
 <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
@@ -24,7 +30,9 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/v4-shims.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
 <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
 <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
 
@@ -66,19 +74,19 @@
     <div id="firstForm" class="form-data">
                                 <form action="" >
                                         <p id="date" style="font-size: 12px;font-weight: bold;"></p>
-                                        <h1 style="margin-bottom: 30px;">WEBERATOR</h1>
+                                        <h1 style="margin-bottom: 30px;margin-top: 0px;color:black;">WEBERATOR</h1>
                                         
                                          <div style="display:inline-block;">  
-                                            <input id="yourName" type="text" style="float:left;width:49%;" class="input" placeholder="First">
-                                            <input id="lastName" type="text" style="float:right;width:49%;" class="input1" placeholder="Last">   
+                                            <input id="yourName" type="text" style="float:left;width:49%;color:black;" class="input" placeholder="First">
+                                            <input id="lastName" type="text" style="float:right;width:49%;color:black;" class="input1" placeholder="Last">   
                                           </div>  
-                                             <input id="numberInput" type="text" class="input" placeholder="Phone number"> 
-                                             <input id="emailInput" type="text" class="input" placeholder="Email Address"> 
-                                             <input id="birthInput" type="text"  class="input" placeholder="Date of Birth (MM/DD/YYYY)"> 
-                                            <input id="ageInput" type="text"  class="input" placeholder="Age"> 
-                                            <input id="jobTitle1" type="text"   class="input" placeholder="First Job Title">
-                                            <input id="jobTitle2" type="text"   class="input" placeholder="Second Job Title">
-                                            <input  type="file" id="myFile" style="color:black;">
+                                             <input id="numberInput" type="text" class="input" style="color:black;" placeholder="Phone number" data-mask="(000) 000 0000"> 
+                                             <input id="emailInput" type="text" class="input" style="color:black;" placeholder="Email Address"> 
+                                             <input id="birthInput" type="text"  class="input" style="color:black;" placeholder="Date of Birth (MM/DD/YY)" data-mask="00/00/00"> 
+                                            <input id="ageInput" type="text"  class="input" style="color:black;" placeholder="Age" data-mask="00"> 
+                                            <input id="jobTitle1" type="text"   class="input" style="color:black;" placeholder="First Job Title">
+                                            <input id="jobTitle2" type="text"   class="input" style="color:black;" placeholder="Second Job Title">
+                                            <input  type="file" id="myFile" style="color:#bbb; font-size:12px;">
                                         <a  onclick="next()" id="next-btn">Next</a>
 
                                 </form>     
@@ -87,10 +95,10 @@
                                  
     </div>
     
-    <div id="secondForm" class="form-data hide">
+    <div id="secondForm" class="form-data hide" style="max-width: 45rem;">
         <form action="">
                 <p id="date" style="font-size: 12px;font-weight: bold;"></p>
-                <h1 style="margin-bottom: 30px;">WEBERATOR</h1>
+                <h1 style="margin-bottom: 30px;margin-top: 0px; color:black;">WEBERATOR</h1>
                 <select id="brandOptions"  class="input" style=" -webkit-appearance: none;-webkit-border-radius: 5px;border:2px solid #eee;  background-color: transparent; color:gray;" >
                     <option  class= "selected" disabled selected value="0">Show your name at the top left corner?</option>
                     <option  value="yes">Yes</option>
@@ -101,16 +109,35 @@
                 <option  value="round">Circle</option>
                 <option  value="square">Square</option>
             </select>
-                    <input  id="inputURL" type="text" class="input" name="card_holder" placeholder="Image URL Address">
-                    <input id="insta" type="text" class="input" placeholder="Instagram Username">
-                    <input id="twitter" type="text" class="input" placeholder="Twitter Username">
-                    <input id="github" type="text"  class="input" placeholder="Github Username">
-                    <input id="facebook" type="text"   class="input" placeholder="Facebook Username">
+                    <input  id="inputURL" type="text" class="input" name="card_holder" style="color:black;" placeholder="Image URL Address">
+                    <input id="insta" type="text" class="input" style="color:black;" placeholder="Instagram Username">
+                    <input id="twitter" type="text" class="input" style="color:black;" placeholder="Twitter Username">
+                    <input id="github" type="text"  class="input" style="color:black;" placeholder="Github Username">
+                    <input id="facebook" type="text"   class="input" style="color:black;" placeholder="LinkedIn Profile URL">
                    
-                <a class="form-btn" onclick="PushToArray(), downloading()">Download</a>
+                <a id="next-btn" onclick="PushToArray(), secondNext()">Download</a>
               
         </form>            
 </div>
+
+<div id="thirdForm" class="form-data hide" style="max-width: 45rem;">
+    <form action="">
+            
+            <h1 style="margin-bottom: 30px;margin-top: 0px; color:black;">WEBERATOR</h1>
+            <p id="date" style="font-size: 12px;font-weight: bold;color:black;">Follow the steps in the new tab. If you can't find it, <a href="https://talalzeini.github.io/scientific-calculator/" style="width:100%;">click here.</a></p>
+    </form>            
+</div>
+
+
+
+
+
+
+
+
+
+
+
 </div>
 </div>
 </div>
@@ -206,7 +233,7 @@
 <!--- Profile box starts here --> 
 <div class= "box">
 
-       <div><img  id="image" class="box-img square"></img></div>
+       <img  id="image" src=" " class="box-img"></img>
           
 
 <br>
@@ -308,9 +335,9 @@
 <span>
     <span>
           <span>
-                <li id="fb" style="animation-duration: 4s;">
+                <li>
                   <a id="instaLink">
-                            <i style="animation-duration: 1.5s;" class="fab fa-instagram  fadeInLeftBig" aria-hidden="true"></i>
+                            <i class="fab fa-instagram  fadeInLeftBig" aria-hidden="true"></i>
                       </a>
                 </li>
           </span>
@@ -318,7 +345,7 @@
 </span>
 <!--- Twitter -->
     <span>       
-          <li id="yt" style="animation-duration: 4.25s;" >
+          <li>
                 <a id="twitterLink">
                       <i style="animation-duration: 1s;" class="fa fa-twitter  fadeInLeftBig" aria-hidden="true"></i>
                 </a>
@@ -326,18 +353,18 @@
     </span>
 
 <!--- Github -->         
-    <li id="ig" style="animation-duration: 4.5s;">
+    <li >
            <a id="gitLink">
-                <i style="animation-duration: 1s;" class="fa fa-github  fadeInRightBig" aria-hidden="true"></i>
+                <i style="animation-duration: 1s;" class="fa fa-github" aria-hidden="true"></i>
           </a>
     </li>
 
 <!--- Linkedin -->        
 <span>
     <span>
-                <li id="ig" style="animation-duration: 4.75s;" >
+                <li>
                       <a id="fbLink">
-                           <i style="animation-duration: 1.5s;" class="fa fa-facebook  fadeInRightBig" aria-hidden="true"></i>
+                           <i class="fa fa-linkedin" aria-hidden="true"></i>
                       </a>
                 </li>
     </span>
@@ -370,6 +397,7 @@
 <footer>
            <p style=" text-transform:uppercase;" class="copyright  fadeInRightBig" id="footerInput"> </p>
 </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
 <style>
       html, body {
     margin: 0;
@@ -1020,10 +1048,6 @@ height: 1px;
 .about {
     height: 500px;
     margin-top: 120px;
-}
-
-.image {
-    background: url(https://images.unsplash.com/photo-1540885762261-a2ca01f290f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2468&q=80) no-repeat 50% 70%;
 }
 
 /*--------------- contact form --------------- */

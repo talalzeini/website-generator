@@ -8,22 +8,7 @@ var array = [];
 
 
 function PushToArray(){
-
-if( document.getElementById('brandOptions').value == "yes"){
-        document.getElementById('navBrand').classList.remove('hide');
-        document.getElementById('brand').classList.remove('hide');
-        document.getElementById('navBrand').classList.add('block');
-        document.getElementById('brand').classList.add('block');
-}
-if(document.getElementById('brandOptions').value == "no"){
-        console.log('no');
-        document.getElementById('navBrand').classList.add('hide');
-        document.getElementById('brand').classList.add('hide');
-        document.getElementById('navBrand').classList.remove('block');
-        document.getElementById('brand').classList.remove('block');
-}
-
-   
+ 
 // const inputs = document.getElementById('inputs');
 // inputs.classList.add('hide');
 // const body = document.getElementById('body');
@@ -75,7 +60,7 @@ birthId.innerText = birthInput
 var insta = document.getElementById('insta').value;
 var github = document.getElementById('github').value;
 var twitter = document.getElementById('twitter').value;
-var facebook = document.getElementById('facebook').value;
+var linkedin = document.getElementById('facebook').value;
 
 
 var instaLink = document.getElementById('instaLink');
@@ -86,7 +71,7 @@ var fbLink = document.getElementById('fbLink');
 instaLink.href = "https://www.instagram.com/" + insta;     
 gitLink.href = "https://www.github.com/" + github; 
 twitterLink.href = "https://www.twitter.com/" + twitter; 
-fbLink.href="https://www.facebook.com/" + facebook;
+fbLink.href="https://www.linkedin.com/in/" + linkedin;
 
 
 
@@ -122,60 +107,40 @@ function downloading(){
 const eh =  "<!DOCTYPE html><html><head id='head'>" + document.getElementById('head').innerHTML +  "</head><body id='mainBody' class='black'><div id='body'>" + document.getElementById('body').innerHTML + "</div></body></html>";
 download("index.html",eh);
 console.log("downloading() function is called and index.html available to download.")
+window.open("guide.html", '_blank');
+document.getElementById('thirdForm').classList.remove("hide");
+document.getElementById('secondForm').classList.add("hide");
 }
-    
-
-
 
 function next(){
+    
     // if all empty
-    var resumeInput = document.getElementById("myFile").files[0].name;
-    console.log(resumeInput);
-    document.getElementById('resume').href = resumeInput
-    document.getElementById('resume').download = resumeInput;
-if(document.getElementById('yourName').value.trim().length == 0 && document.getElementById('lastName').value.trim().length == 0 && document.getElementById('jobTitle1').value.trim().length == 0 && document.getElementById('jobTitle2').value.trim().length == 0 ){
+
+if(document.getElementById('yourName').value.trim().length == 0 
+|| document.getElementById('lastName').value.trim().length == 0 
+|| document.getElementById('jobTitle1').value.trim().length == 0 
+|| document.getElementById('jobTitle2').value.trim().length == 0 
+|| document.getElementById('ageInput').value.trim().length == 0 
+|| document.getElementById('numberInput').value.trim().length == 0 
+|| document.getElementById('birthInput').value.trim().length == 0 
+|| document.getElementById('emailInput').value.trim().length == 0 
+|| document.getElementById("myFile").files[0].name == null
+){
     window.alert("You must fill out this form properly in order to proceed.");
     document.getElementById('yourName').classList.add('redPH');
     document.getElementById('lastName').classList.add('redPH');
     document.getElementById('jobTitle1').classList.add('redPH');
     document.getElementById('jobTitle2').classList.add('redPH');
-    return;
-} 
-if(!document.getElementById('yourName').value.trim().length == 0 && document.getElementById('jobTitle1').value.trim().length == 0 && document.getElementById('jobTitle2').value.trim().length == 0 ){
-    window.alert("You must enter two job titles in order to proceed.");
-    document.getElementById('jobTitle1').classList.add('redPH');
-    document.getElementById('jobTitle2').classList.add('redPH');
-    return;
-}  
-if(document.getElementById('yourName').value.trim().length == 0 && document.getElementById('lastName').value.trim().length == 0 && !document.getElementById('jobTitle1').value.trim().length == 0 && document.getElementById('jobTitle2').value.trim().length == 0 ){
-    window.alert("You must enter your name and two job titles in order to proceed.");
-    document.getElementById('yourName').classList.add('redPH');
-    document.getElementById('lastName').classList.add('redPH');
-    document.getElementById('jobTitle2').classList.add('redPH');
-    return;
-}   
-if(document.getElementById('yourName').value.trim().length == 0 && document.getElementById('jobTitle1').value.trim().length == 0 && !document.getElementById('jobTitle2').value.trim().length == 0 ){
-    window.alert("You must enter your name and two job titles in order to proceed.");
-    document.getElementById('yourName').classList.add('redPH');
-    document.getElementById('jobTitle1').classList.add('redPH');
-    return;
-}   
-if(document.getElementById('yourName').value.trim().length == 0 && !document.getElementById('jobTitle1').value.trim().length == 0 && !document.getElementById('jobTitle2').value.trim().length == 0 ){
-    window.alert("You must enter your name in order to proceed.");
-    document.getElementById('yourName').classList.add('redPH');
-    return;
-}   
-if(document.getElementById('yourName').value.trim().length == 0 && document.getElementById('jobTitle1').value.trim().length == 0 && !document.getElementById('jobTitle2').value.trim().length == 0 ){
-    window.alert("You must enter two job titles in order to proceed.");
-    document.getElementById('jobTitle1').classList.add('redPH');
+    document.getElementById('birthInput').classList.add('redPH');
+    document.getElementById('ageInput').classList.add('redPH');
+    document.getElementById('numberInput').classList.add('redPH');
+    document.getElementById('emailInput').classList.add('redPH');
     return;
 }
-if(document.getElementById('yourName').value.trim().length == 0 && !document.getElementById('jobTitle1').value.trim().length == 0 && document.getElementById('jobTitle2').value.trim().length == 0 ){
-    window.alert("You must enter two job titles in order to proceed.");
-    document.getElementById('jobTitle1').classList.add('redPH');
-    return;
-}
+var resumeInput = document.getElementById("myFile").files[0].name;
 
+document.getElementById('resume').href = resumeInput
+document.getElementById('resume').download = resumeInput;
 document.getElementById("firstForm").classList.add("hide")
 document.getElementById("secondForm").classList.remove("hide")
 
@@ -183,25 +148,47 @@ document.getElementById("secondForm").classList.remove("hide")
 
     
 function secondNext(){
-    if(document.getElementById('pic').value == "0" ){
-        window.alert("You must fill out this form properly in order to proceed.");
-        return;
-    }
-    if(document.getElementById('inputURL').value.trim().length == 0){
-        window.alert("You must fill out this form properly in order to proceed.");
-        return;
-    }
+
     if( document.getElementById('pic').value == "round"){
         document.getElementById('image').classList.add('round');
-        document.getElementById('image').classList.remove('square');   
+        document.getElementById('image').classList.remove('square');
     }
     if(document.getElementById('pic').value == "square"){
         document.getElementById('image').classList.remove('round');
         document.getElementById('image').classList.add('square');
     }
+
+    if(document.getElementById('inputURL').value.trim().length == 0
+    || document.getElementById('insta').value.trim().length == 0 
+    || document.getElementById('twitter').value.trim().length == 0 
+    || document.getElementById('github').value.trim().length == 0 
+    || document.getElementById('facebook').value.trim().length == 0 
+    ){
+        window.alert("You must fill out this form properly in order to proceed.");
+        document.getElementById('inputURL').classList.add('redPH');
+        document.getElementById('insta').classList.add('redPH');
+        document.getElementById('twitter').classList.add('redPH');
+        document.getElementById('github').classList.add('redPH');
+        document.getElementById('facebook').classList.add('redPH');
+        return;
+    }
+    if( document.getElementById('brandOptions').value == "yes"){
+        document.getElementById('navBrand').classList.remove('hide');
+
+        document.getElementById('navBrand').classList.add('block');
+ 
+}
+if(document.getElementById('brandOptions').value == "no"){
+        console.log('no');
+        document.getElementById('navBrand').classList.add('hide');
+
+        document.getElementById('navBrand').classList.remove('block');
+
+}
+
         var inputURL = document.getElementById('inputURL').value;
-        var image = document.getElementById('image');
-        image.src = inputURL;
+        document.getElementById('image').src = inputURL;
+        downloading();
 }
 
 

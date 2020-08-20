@@ -2,15 +2,59 @@ html{
     font-size: 10px;
     box-sizing: border-box;
     overflow-x: hidden;
+   color:black; 
 }
 *,
-*::before,
 *::after{
     margin: 0;
     padding:0;
     box-sizing: inherit;
     outline: none;
     font-family: 'Roboto Mono';
+}
+.repo-btn{
+    width:80px;
+    border:1px solid green;
+    line-height: 5px;
+    border-radius: 5px;
+    vertical-align: center;
+    background: rgb(5, 165, 5);
+    height:31px;
+}
+
+.pub-btn{
+    width:250px;
+    border:1px solid rgb(112, 243, 112);
+    line-height: 5px;
+    vertical-align: center;
+    background: rgb(170, 255, 170);
+    height:45px;
+}
+.copy-btn{
+    width:35px;
+    border:1px solid rgba(128,128,128,0.25);
+    line-height: 5px;
+    border-radius: 5px;
+    vertical-align: center;
+    background:  #eee;
+    height:25px;
+}
+.cd-btn{
+    width:35px;
+    line-height: 23px;
+    border:1px solid rgba(128,128,128,0.25);
+    vertical-align: center;
+    background:  #eee;
+    height:25px;
+}
+.terminal-btn{
+    width:35px;
+    border:1px solid rgba(230,230,230,1);
+    line-height: 5px;
+    
+    vertical-align: center;
+    background:  black;
+    height:25px;
 }
 h1{
     font-size: 30px;
@@ -692,6 +736,7 @@ height: 1px;
 input:focus {
     outline: none;
     border: none;
+    color:black;
 }
 
 textarea:focus {
@@ -1317,7 +1362,8 @@ color: #ff4d4d;
 }
 #next-btn{
     margin:1rem 0 1.5rem;
-    height:3rem;
+    height:3.5rem;
+    line-height: 30px;
     background-color: #3897f0;
     font-size: 1.5rem;
     font-weight: bold;
